@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>List Product</title>
+        <script>
+            products=[
+                        {"ProductId":"P1","ProductName":"Coca","UnitPrice":15},
+                        {"ProductId":"P2","ProductName":"Pepsi","UnitPrice":10},
+                        {"ProductId":"P3","ProductName":"Sting","UnitPrice":12},
+                    ]
+        </script>
+        <script>
+            function loadProduct()
+            {
+                tbodyProduct=document.getElementById("tbodyProduct")
+                for(i=0;i<products.length;i++)
+                {
+                    product=products[i]
+                    tr="<tr>"
+                    tr+="<td>"+product.ProductId+"</td>"
+                    tr+="<td>"+product.ProductName+"</td>"
+                    tr+="<td>"+product.UnitPrice+"</td>"
+                    tr+="</tr>"
+
+                    tbodyProduct.innerHTML+=tr
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>List Product</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ProductId</th>
+                    <th>ProductName</th>
+                    <th>UnitPrice</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyProduct">
+
+            </tbody>
+        </table>
+        <script>
+            loadProduct()
+        </script>
+    </body>
+</html>

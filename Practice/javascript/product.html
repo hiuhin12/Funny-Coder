@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Product</title>
+        <script>
+            product={"ProductId":1,
+                    "ProductName":"Coca",
+                    "UnitPrice":15,
+                    description:function()
+                        {
+                            return this.ProductId+"-"
+                            +this.ProductName+"-"
+                            +this.UnitPrice
+                        }
+                    }
+        </script>
+        <script>
+            function loadData()
+            {
+                tdProductId=document.getElementById("tdProductId")
+                tdProductName=document.getElementById("tdProductName")
+                tdUnitPrice=document.getElementById("tdUnitPrice")
+                tdProductId.innerText=product.ProductId
+                tdProductName.innerText=product.ProductName
+                tdUnitPrice.innerText=product.UnitPrice
+
+                tdDescription=document.getElementById("tdDescription")
+                tdDescription.innerText=product.description()
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Product Details:</h3>
+        <table border="1">
+            <tr>
+                <td>Product Id</td>
+                <td id="tdProductId"></td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td id="tdProductName"></td>
+            </tr>
+            <tr>
+                <td>Unit Price</td>
+                <td id="tdUnitPrice"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td id="tdDescription"></td>
+            </tr>
+        </table>
+        <script>
+            loadData()
+        </script>
+    </body>
+</html>

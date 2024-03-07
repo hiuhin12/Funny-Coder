@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #92dc9e; 
+    text-align: center; 
+}
+
+#ketQua {
+    color: red; 
+}
+
+input[type="button"] {
+    border: 1px solid rgb(173, 173, 69); 
+}

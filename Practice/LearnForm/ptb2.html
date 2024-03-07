@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>PTB2</title>
+    <script>
+        function xuLyGiai()
+        {
+            a=frmPtb2.hsa.value
+            b=frmPtb2.hsb.value
+            c=frmPtb2.hsc.value
+            a=eval(a)
+            b=eval(b)
+            c=eval(c)
+            tdketqua=document.getElementById("idketqua")
+            if(a==0) 
+            {
+                //biện luận theo bậc 1
+                //bx + c = 0 
+                if(b==0 && c==0)
+                {
+                    tdketqua.innerText="Vô số nghiệm"
+                }
+                else if(b==0 && c!=0)
+                {
+                    tdketqua.innerText="Vô nghiệm"
+                }
+                else //bx = -c
+                {
+                    tdketqua.innerText=-(c/b)
+                }
+            }
+            else
+            {
+                //biện luận theo bậc 2 (delta)
+                delta=Math.pow(b,2)-4*a*c
+                if(delta<0)
+                {
+                    tdketqua.innerText="Vô nghiệm"
+                }
+                else if(delta==0)
+                {
+                    tdketqua.innerText="Nghiệm kép x1=x2="+(-b/2*a)
+                }
+                else 
+                {
+                    x1=(-b-Math.sqrt(delta))/(2*a)
+                    x2=(-b+Math.sqrt(delta))/(2*a)
+                    tdketqua.innerHTML="x1="+x1+"<br/>x2="+x2
+                }
+            }
+        }
+        function xulytiep()
+        {
+            frmPtb2.hsa.value="";
+            frmPtb2.hsb.value="";
+            frmPtb2.hsc.value="";
+            tdketqua=document.getElementById("idketqua")
+            tdketqua.innerText=""
+        }
+    </script>
+    <script>
+        function openUrl(url)
+        {
+            result=confirm("Open ["+url+"]?")
+            if (result==true)
+            {
+                window.open(url)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>PTB2</h1>
+    <a href="#" onclick="openUrl('https://uel.edu.vn')">Open UEL Website</a>
+    <form name="frmPtb2">
+        <table>
+            <tr>
+                <td>
+                    <label for="hsa">He so a:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsa" id="hsa">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hsb">He so b:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsb" id="hsb">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hsc">He so c:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsb" id="hsc">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="" style="text-align:center;">
+                    <input type="button" value="giai" onclick="xuLyGiai()">
+                    <input type="button" value="tiep" onclick="xulytiep()">
+                </td>
+            </tr>
+            <tr>
+                <td>Ket qua</td>
+                <td id="idketqua">
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+    font-size: 1.5em;
+    font-family: Roboto;
+    margin: 0;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+}
+
+.content a:hover{
+    color: red;
+}
+
+b {
+    color: red
+}
+
+h4{
+    color:rgb(0, 155, 21);
+}
+body{
+    background-image: url("Wrap.jpg");
+    padding: 5px 80px;
+}
+
+ul li{
+    list-style: none;
+}
+
+  input,
+  button {
+    font-size: 1.2em;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  h4 {
+    margin: 0;
+    color: white;
+  }
+  
+  textarea {
+    font-size: 1.3em;
+  }
+  
+  .tbColor input {
+    width: 10%;
+  }
+  
+  .container-medium a {
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  .container-medium a:hover {
+    color: red; /* Change link color to red on hover */
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .container-medium {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+  }
+  
+  .navbar {
+    background-color: black;
+  }
+  
+  .navbar a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    padding: 0 16px;
+  }
+  
+  .navbar a:hover {
+    color: black;
+    background-color: aliceblue;
+  }
+  
+  .navigation-bar ul,
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .navigation-bar ul li {
+    display: inline;
+  }
+  
+  .navigation-bar ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+  }
+  
+  .navigation-bar ul li a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0;
+    color: black;
+  }
+  
+  .navigation-bar ul li a:hover {
+    background-color: orange;
+  }
+  
+  .sub-bar {
+    display: none;
+    border: 1px solid green;
+  }
+  
+  .sub-bar li {
+    display: inline;
+    position: relative;
+  }

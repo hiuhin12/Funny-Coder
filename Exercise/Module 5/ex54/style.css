@@ -1,0 +1,94 @@
+body {
+    font-size: 1.5em;
+    font-family: Roboto;
+    margin: 0;
+    background-image: url(/);
+  }
+
+  input,
+  button {
+    font-size: 1.2em;
+  }
+  
+  table {
+    border-collapse: calc();
+    width: 100%;
+  }
+  
+  h4 {
+    margin: 0;
+  }
+  
+  textarea {
+    font-size: 1.3em;
+  }
+  
+  .tbColor input {
+    width: 10%;
+  }
+  
+  .container-medium a {
+    color: black !important;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .container-medium {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+  }
+  
+  .navbar {
+    background-color: black;
+  }
+  
+  .navbar a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    padding: 0 16px;
+  }
+  
+  .navbar a:hover {
+    color: black;
+    background-color: aliceblue;
+  }
+  
+  .navigation-bar ul,
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .navigation-bar ul li {
+    display: inline;
+  }
+  
+  .navigation-bar ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+  }
+  
+  .navigation-bar ul li a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0;
+    color: black;
+  }
+  
+  .navigation-bar ul li a:hover {
+    background-color: orange;
+  }
+  
+  .sub-bar {
+    display: none;
+    border: 1px solid green;
+  }
+  
+  .sub-bar li {
+    display: inline;
+    position: relative;
+  }

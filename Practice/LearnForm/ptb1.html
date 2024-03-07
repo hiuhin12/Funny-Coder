@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>PTB1</title>
+    <script>
+        function xuLyGiai()
+        {
+            a=frmPtb1.hsa.value
+            b=frmPtb1.hsb.value
+            a=eval(a)
+            b=eval(b)
+            tdketqua=document.getElementById("idketqua")
+            if(a==0 && b==0)
+            {
+                tdketqua.innerText="Tum lum nghiem"
+            }
+            else if (a==0 && b !=0)
+            {
+                //tdketqua.innerText="No nghiem"
+                tdketqua.innerHTML="<font color='red'> No nghiem </font>"
+            }
+            else
+            {
+                tdketqua.innerText=(-b/a)
+            }
+        }
+        function xulytiep()
+        {
+            frmPtb1.hsa.value="";
+            frmPtb1.hsb.value="";
+            tdketqua=document.getElementById("idketqua")
+            tdketqua.innerText=""
+        }
+    </script>
+</head>
+<body>
+    <h1>PTB1</h1>
+    <form name="frmPtb1">
+        <table>
+            <tr>
+                <td>
+                    <label for="hsa">He so a:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsa" id="hsa">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hsb">He so b:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsb" id="hsb">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="" style="text-align:center;">
+                    <input type="button" value="giai" onclick="xuLyGiai()">
+                    <input type="button" value="tiep" onclick="xulytiep()">
+                </td>
+            </tr>
+            <tr>
+                <td>Ket qua</td>
+                <td id="idketqua">
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

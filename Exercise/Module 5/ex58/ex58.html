@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Module 5 Bài 5</title>
+    <link href="ex58.css" rel="stylesheet" />
+    <style>
+        select{
+            font-size: 1.2em;   
+        }
+
+        body {
+            font-family: Roboto;
+            margin: 0;
+            background-color: rgb(10, 10, 148);
+            color: aliceblue;
+            margin-left: 50px;
+        }
+        
+        table {
+            border-collapse: calc();
+            width: 100%;
+        }
+          
+        h2 {
+            margin: 0;
+        }
+        
+        div{
+            padding: 5px;
+        }
+        
+        .container-medium a {
+            color: black !important;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .container-medium {
+            display: grid;
+            grid-template-columns: 3fr 7fr;
+        }
+         
+    </style>
+    <script>
+        window.onload = function(){
+            const txtToday = document.getElementById('txtToday');
+            const txtFirstName = document.getElementById('txtFirstName');
+            const ddOption = document.getElementById('ddOption');
+
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            const c = document.getElementById('c');
+            const d = document.getElementById('d');
+            const e = document.getElementById('e');
+            const f = document.getElementById('f');
+
+            
+            const checkInputValue = (value) => {
+                if (eval(value) > 2 || eval(value) < 0) {
+                    alert('You can only input number form 0 to 2');
+                }
+                else {
+                    return value;
+                }
+            };
+            
+            a.addEventListener('keyup', () => {
+                a.value = checkInputValue(a.value);
+                f.value = Sum(eval(a.value), eval(b.value), eval(c.value), eval(d.value), eval(e.value));
+            });
+            b.addEventListener('keyup', () => {
+                b.value = checkInputValue(b.value);
+                f.value = Sum(eval(a.value), eval(b.value), eval(c.value), eval(d.value), eval(e.value));
+            });
+            c.addEventListener('keyup', () => {
+                c.value = checkInputValue(c.value);
+                f.value = Sum(eval(a.value), eval(b.value), eval(c.value), eval(d.value), eval(e.value));
+            });
+            d.addEventListener('keyup', () => {
+                d.value = checkInputValue(d.value);
+                f.value = Sum(eval(a.value), eval(b.value), eval(c.value), eval(d.value), eval(e.value));
+            });
+            
+            e.addEventListener('keyup', () => {
+                e.value = checkInputValue(e.value);
+                f.value = Sum(eval(a.value), eval(b.value), eval(c.value), eval(d.value), eval(e.value));
+            });
+
+            function Sum(...arguments) {
+                let total = 0;
+                for (var num of arguments) {
+                    if (isNaN(num)) {
+                        num = 0;
+                        total += num;
+                    }
+                    else {
+                        total += num;
+                    }
+                }
+                return total;
+            }
+
+            window.addEventListener('load', () => {
+                txtToday.value = new Date().toLocaleDateString();
+                txtFirstName.focus();
+            });
+            
+            ddOption.addEventListener('mouseout', event => {
+                if (ddOption.value == "OTHER") {
+                    alert('please input your name.');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <img src="Logo.gif" />
+        <h2>Neonatal Feeding Study</h2>
+        </br>
+    </div>
+    
+    <div class="container-medium">
+        <div></div>
+        <div>
+            <label>Today is:</label>
+            <input id="txtToday" type="datetime" name="todaydate" readonly style="float: none;"/>
+        </div>
+
+        <div>
+            <label>1) Name(First, Last):</label>
+        </div>
+        <div>
+            <input id="txtFirstName" type="text" name="firstname" placeholder="First name" />
+            <input id="txtLastName" type="text" name="lastname" placeholder="Last name" />
+        </div>
+
+        <div>
+            <label>2) Medical Record#:</label>
+        </div>
+        <div>
+            <input type="text" name="medicalrecord" />
+        </div>
+
+        <div>
+            <label>3) DOB:</label>
+        </div>
+        <div>
+            <input type="datetime" name="datetime" />
+        </div>
+
+        <div>
+            <div>
+                <label>4) Physician:</label>
+            </div>
+            <div>
+                <label>
+                    &nbsp;&nbsp;&nbsp;&nbsp; If other (specify):
+                </label>
+            </div>
+        </div>
+        <div>
+            <select id="ddOption">
+                <option value="MK">Dr. My Kim Phan</option>
+                <option value="MK">Dr. My Kim Phan</option>
+                <option value="MK">Dr. My Kim Phan</option>
+                <option value="MK">Dr. My Kim Phan</option>
+                <option value="OTHER">Other</option>
+            </select>
+            <div>
+                <input type="text" name="other" />
+            </div>
+        </div>
+
+        <div>
+            <label>5) 1 Minute APGAR Score:</label>
+            <div>
+                <label>Each score must be 0,1, or 2</label>
+            </div>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <td>Activity</td>
+                    <td>
+                        <input id="a" max="2" min="0" type="number" placeholder="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pulse</td>
+                    <td>
+                        <input id="b" max="2" min="0" type="number" placeholder="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Grimmace (Reflex, Imtability)</td>
+                    <td>
+                        <input id="c" max="2" min="0" type="number" placeholder="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Appearance (Skin color)</td>
+                    <td>
+                        <input id="d" max="2" min="0" type="number" placeholder="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Respiration</td>
+                    <td>
+                        <input id="e" max="2" min="0" type="number" placeholder="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>
+                        <input readonly id="f" type="number" placeholder="0" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <label>6) Birth weight (gms):</label>
+            <div>
+                <label>Weights must be >= 1200 gms</label>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="birthweight" />
+        </div>
+
+        <div>
+            <label>7) Parental Consent (required):</label>
+        </div>
+        <div>
+            <input type="checkbox" name="birthweight" />
+        </div>
+
+    </div>
+
+    <div align="center">
+        <button type="submit">Register</button>
+        <button type="reset">Reload page</button>
+    </div>
+</body>
+</html>

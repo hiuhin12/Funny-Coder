@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">   
+    <script>
+        function giaiPhuongTrinhBacHai(a, b, c) {
+            if (a === 0) {
+                if (b === 0) {
+                    return "Phương trình vô nghiệm";
+                } else {
+                    let x = -c / b;
+                    return "x = " + x;
+                }
+            } else {
+                let delta = b * b - 4 * a * c;
+                let x1, x2;
+
+                if (delta > 0) {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    return "x1 = " + x1 + ", x2 = " + x2;
+                } else if (delta === 0) {
+                    x1 = -b / (2 * a);
+                    return "x1 = x2 = " + x1;
+                } else {
+                    return "Phương trình vô nghiệm";
+                }
+            }
+        }
+
+        function giaiPhuongTrinh() {
+            let a = parseFloat(document.getElementById("ida").value);
+            let b = parseFloat(document.getElementById("idb").value);
+            let c = parseFloat(document.getElementById("idc").value);
+
+            let ketQua = giaiPhuongTrinhBacHai(a, b, c);
+
+            document.getElementById("ketQua").innerHTML = ketQua;
+        }
+
+        function resetForm() {
+            document.getElementById("ida").value = "";
+            document.getElementById("idb").value = "";
+            document.getElementById("idc").value = "";
+            document.getElementById("ketQua").innerText = "";
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th colspan="2">The quadratic equation</th>
+            </tr>
+            <tr>
+                <td><label>a:</label></td>
+                <td><input type="number" name="ida" id="ida"></td>
+            </tr>
+            <tr>
+                <td><label>b:</label></td>
+                <td><input type="number" name="idb" id="idb"></td>
+            </tr>
+            <tr>
+                <td><label>c:</label></td>
+                <td><input type="number" name="idc" id="idc"></td>
+            </tr>
+            <tr>
+                <td><label>Result:</label></td>
+                <td id="ketQua"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Find Solution" onclick="giaiPhuongTrinh()"/>
+                    <input type="reset" value="Clear" onclick="resetForm()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

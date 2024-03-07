@@ -1,0 +1,27 @@
+body{
+    margin: 0 10px;
+}
+
+div{
+    margin: 0.5px;
+}
+
+form{
+    background-color: rgb(121, 187, 234);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.container-doublecol {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+.comments {
+    width: 100%;
+    height: 80px;
+    text-align: start;
+  }

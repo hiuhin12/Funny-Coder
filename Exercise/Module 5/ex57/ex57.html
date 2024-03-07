@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ex57</title>
+    <style>
+        input {
+            width: 90%;
+        }
+        button {
+            background-color: yellow;
+            width: 95%;
+        }
+        
+    </style>
+    <script>
+        /* function processMoney(price,qty,idmoney)
+            {
+                idmoney.value=eval(price)*eval(qty)
+            } */
+        window.onload = function(){
+            const txtSL1 = document.getElementById('sl1');
+            const txtSL2 = document.getElementById('sl2');
+            const txtSL3 = document.getElementById('sl3');
+            const txtTotal = document.getElementById('txtTotal');
+            const txtspa = document.getElementById('txtspa');
+            const txtspb = document.getElementById('txtspb');
+            const txtspc = document.getElementById('txtspc');
+            const btnTongCong = document.getElementById('btnTongCong');
+
+            txtSL1.addEventListener("keyup", (event) => {
+                txtspa.value = 19.95 * eval(txtSL1.value);
+            });
+
+            txtSL2.addEventListener("keyup", (event) => {
+                txtspb.value = 29.95 * eval(txtSL2.value);
+            });
+
+            txtSL3.addEventListener("keyup", (event) => {
+                txtspc.value = 39.95 * eval(txtSL3.value);
+            });
+
+            const total = () => {
+                txtTotal.value = 19.95 * eval(txtSL1.value) + 29.95 * eval(txtSL2.value) + 39.95 * eval(txtSL3.value);
+            }
+            btnTongCong.onclick = function() {
+                total(); 
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Part Number</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Item table</th>
+        </tr>
+
+        <tr>
+            <td>C112</td>
+            <td>Mouse</td>
+            <td>19.95$</td>
+            <!-- 
+                <tr>
+                    <td id="td1">19.5</td>
+                    <td>
+                        <input type="number"
+                            onchange="processMoney(td1.innerText,this.value,idmoney)">
+                    </td>
+                    <td><input type="number" id="idmoney"></td>
+                </tr>
+             -->
+            <td><input id="sl1" type="number" name="quana"></td>
+            <td><input readonly id="txtspa" type="number" name="total"></td>
+        </tr>
+
+        <tr>
+            <td>B124</td>
+            <td>Keyboard US</td>
+            <td>29.95$</td>
+            <td><input id="sl2" type="number" name="quanb"></td>
+            <td><input readonly id="txtspb" type="number" name="total"></td>
+        </tr>
+        <tr>
+            <td>U125</td>
+            <td>USB KingMax</td>
+            <td>39.95$</td>
+            <td>
+                <input id="sl3" type="number" name="quanc"/>
+            </td>
+            <td>
+                <input readonly id="txtspc" type="number" name="total" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="right">
+                <label for="total">Total</label> 
+            </td>
+            <td>
+                <input readonly id="txtTotal" type="number" name="total" value="Total">    
+                <button id="btnTongCong">SUM</button>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

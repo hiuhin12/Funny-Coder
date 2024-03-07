@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function giaiPhuongTrinhBac1(a, b) {
+            if (a==0 && b==0){
+                ketQua.innerHTML="Vo so nghiem"
+            }
+            else if(a==0 && b!=0){
+                ketQua.innerHTML="Vo nghiem"
+            }
+            else{
+            let x = -b / a;}
+            return "x = " + x;
+        } 
+
+        function giaiPhuongTrinh() {
+            let a = parseFloat(document.getElementById("ida").value);
+            let b = parseFloat(document.getElementById("idb").value);
+
+            let ketQua = giaiPhuongTrinhBac1(a, b);
+
+            document.getElementById("ketQua").innerHTML = ketQua;
+        }
+
+        function resetForm() {
+            document.getElementById("ida").value = "";
+            document.getElementById("idb").value = "";
+            document.getElementById("ketQua").innerText = "";
+        }
+    </script>
+</head>
+<body>
+    <form action="myform">
+        <table border="1">
+            <tr>
+                <td colspan="2"> PTB1 </td>
+            </tr>
+            <tr>
+                <td><label>a:</label></td>
+                <td><input type="number" name="ida" id="ida"></td>
+            </tr>
+            <tr>
+                <td><label>b:</label></td>
+                <td><input type="number" name="idb" id="idb"></td>
+            </tr>
+            <tr>
+                <td><label>Result:</label></td>
+                <td id="ketQua"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Find Solution" onclick="giaiPhuongTrinh()"/>
+                    <input type="reset" value="Clear" onclick="resetForm()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

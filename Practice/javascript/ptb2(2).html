@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>PTB2</title>
+    <script src="ptb2.js"></script>
+    <script>
+        function xuLyGiai()
+        {
+            a=frmPtb2.hsa.value
+            b=frmPtb2.hsb.value
+            c=frmPtb2.hsc.value
+            a=eval(a)
+            b=eval(b)
+            c=eval(c)
+            tdketqua=document.getElementById("idketqua")
+            tdketqua.innerText=giaiPtb2(a,b,c)
+        }
+        function xulytiep()
+        {
+            frmPtb2.hsa.value="";
+            frmPtb2.hsb.value="";
+            frmPtb2.hsc.value="";
+            tdketqua=document.getElementById("idketqua")
+            tdketqua.innerText=""
+        }
+    </script>
+</head>
+<body>
+    <h1>PTB2</h1>
+    <form name="frmPtb2">
+        <table>
+            <tr>
+                <td>
+                    <label for="hsa">He so a:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsa" id="hsa">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hsb">He so b:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsb" id="hsb">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hsc">He so c:</label>
+                </td>
+                <td>
+                    <input type="number" name="hsc" id="hsc">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="" style="text-align:center;">
+                    <input type="button" value="giai" onclick="xuLyGiai()">
+                    <input type="button" value="tiep" onclick="xulytiep()">
+                </td>
+            </tr>
+            <tr>
+                <td>Ket qua</td>
+                <td id="idketqua">
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

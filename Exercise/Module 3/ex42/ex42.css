@@ -1,0 +1,51 @@
+body {
+    color:green;
+    background: white url(Draft.jpg) no-repeat fixed center center
+    }
+    
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif
+    }
+
+ADDRESS {
+    font-size: 0.9em;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase
+    }
+
+BLOCKQUOTE{
+    background-color:silver;
+    }
+
+UL {list-style:circle url(Apple.jpg) outside}
+
+UL B {
+    color:rgb(155,0,0)
+    }
+
+A {
+    font-size: 0.9em;
+    color: green;
+    text-align: center;
+    }
+    
+A:hover {
+    color:red;
+    text-transform:uppercase;
+    font-weight:bold
+    }
+
+.Special {
+    color: rgb(153,102,6);
+    font-weight:bold
+    }
+    
+DIV.Article {
+    border-width: 2px;
+    background-color: rgb(252,221,163);
+    width: 250px;
+    float:right;
+    border: 2px solid rgb(0, 193, 3);
+    padding: 0.5em;
+    }

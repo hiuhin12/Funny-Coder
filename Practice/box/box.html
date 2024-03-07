@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Box</title>
+        <style>
+            /* The alert message box */
+            .alert {
+                padding: 5px;
+                background-color: grey;
+                color: white;
+                margin-bottom: 15px;
+            }
+            .borderdiv {
+                border: inset;
+                text-align: justify;
+            }
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="borderdiv">
+            <div class="alert">
+                <span class="closebtn"
+                    onclick="this.parentElement.parentElement.style.display='none';">
+                    <img src="close.png"/>
+                </span>
+                Khoa Hệ thống thông tin - UEL
+            </div>
+            Khoa Hệ thống thông tin thuộc trường Đại học Kinh tế - Luật là cơ sở đào tạo đại học, 
+            sau đại học, nghiên cứu khoa học và công nghệ trong lĩnh vực Tin học - Kinh tế, Hệ thống
+            thông tin quản lý, Thương mại điện tử theo tiêu chí chất lượng cao. 
+        </div>
+    </body>
+</html>

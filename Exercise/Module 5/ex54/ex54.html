@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+        function findmax() {
+            let aval = document.getElementById("ida").value;
+            let bval = document.getElementById("idb").value;
+            let cval = document.getElementById("idc").value;
+            let max = aval; 
+            if (aval <= bval && bval >= cval) {
+                max = bval;
+            }
+            else if (aval <= cval && cval >= bval) {
+                max = cval;
+            }
+            console.log(max);
+            idrs.innerHTML = max;
+            return max; 
+        }
+
+        function findmin() {
+            let aval = document.getElementById("ida").value;
+            let bval = document.getElementById("idb").value;
+            let cval = document.getElementById("idc").value;
+            let min = aval; 
+            if (aval >= bval && bval <= cval) {
+                min = bval;
+            }
+            else if (aval >= cval && cval <= bval) {
+                min = cval;
+            }
+            console.log(min);
+            idrs.innerHTML = min;
+            return min; 
+        }
+
+        function culsina() {
+            let aval = document.getElementById("ida").value;
+            result = Math.sin(aval)
+            idrs.innerHTML=result
+        }
+
+        function culcosa() {
+            let aval = document.getElementById("ida").value;
+            result = Math.cos(aval)
+            idrs.innerHTML=result
+        }
+
+        function square() {
+            let aval = document.getElementById("ida").value;
+            let bval = document.getElementById("idb").value;
+            result = Math.pow(aval, bval)
+            idrs.innerHTML=result
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <div>
+                    <td> <label for="ida"> a: </label> </td>
+                    <td><input type="number" name="a" id="ida"></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td > <label for="idb">b: </label></td>
+                    <td><input type="number" name="b" id="idb"></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td> <label for="idc"> c: </label></td>
+                    <td> <input type="number" name="c" id="idc"></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td > Result: </td>
+                    <td id="idrs"></td>
+                </div>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name="max" id="max" value="MAX" onclick="findmax()">
+                    <input type="button" name="min" id="min" value="MIN" onclick="findmin()">
+                    <input type="button" name="sina" id="sina" value="sin(a)" onclick="culsina()">
+                    <input type="button" name="cosb" id="cosb" value="cos(b)" onclick="culcosa()">
+                    <input type="button" name="ab" id="ab" value="a^b" onclick="square()">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>

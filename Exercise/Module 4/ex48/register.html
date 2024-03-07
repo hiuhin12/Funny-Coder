@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Register Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form>
+            <div align="center">
+                <img src="Jackson.gif" alt="Logo">
+            </div>
+
+            <div align="center">
+                <h2>Registration Form</h2>
+                <p>Register your Jackson Electronics product here</p>
+            </div>
+
+            <div class="container">
+                <div>
+                    <label for="firstname">First name:</label>
+                </div>
+
+                <div>
+                    <input type="text" name="firstname" id="firstname">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                
+                <div>
+                    <label for="address-one">Address #1:</label>
+                </div>
+
+                <div>
+                    <input type="text" name="address-one" id="address-one">
+                </div>
+                
+                <div>
+                    <label for="Address2">Address #2:</label>
+                </div>
+
+                <div>
+                    <input type="text" name="Address2" id="Address2">
+                </div>
+
+                <div>
+                    <label for="City">City:</label>
+                </div>
+
+                <div>
+                    <input type="text" name="City" id="City">
+                    <label for="State">State:</label>
+                    <input type="text" name="State" id="State">
+                    <label for="Zip">Zip:</label>
+                    <input type="text" name="Zip" id="Zip">
+                </div>
+
+                <div>
+                    <label for="country">Country:</label>
+                </div>
+                
+                <div>
+                    <input type="text" placeholder="United States">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container">
+                <div>
+                    <label for="product">Product:</label>
+                </div>
+                <div>
+                    <select name="products" id="products">
+                        <option value="ScanMaster">ScanMaster</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="date-purchased">
+                        DatePurchased:
+                    </label>
+                </div>
+
+                <div>
+                    <input type="text" name="date-purchased" id="date-purchased">
+                </div>
+
+                <div>
+                    <label for="serial"> Serial#: </label>
+                </div>
+                
+                <div>
+                    <input type="text" id="serial" name="serial">
+                </div>
+
+                <div>
+                    <label>Used for:</label>
+                </div>
+
+                <div class="container-doublecol">
+
+                    <div>
+                        <input type="radio" name="usedfor" id="Home">
+                        <label for="Home">Home</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="usedfor" id="Educational">
+                        <label for="Educational">Educational Institution</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="usedfor" id="Business">
+                        <label for="Business">Business</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="usedfor" id="Other">
+                        <label for="Other">Other</label>
+                    </div>
+
+                    <div>
+                        <input type="radio"  name="usedfor" id="Government">
+                        <label for="Government">Government</label>
+                    </div>
+
+                </div>
+
+                <div>
+                    <label>  System (check all that apply): </label>
+                </div>
+
+                <div class="container-doublecol">
+                    <div>
+                        <input type="checkbox" name="window" id="window">
+                        <label for="window">Windows</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="UNIX" id="UNIX">
+                        <label for="UNIX">UNIX</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="Macintosh" id="Macintosh">
+                        <label for="Macintosh">Macintosh</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="Otherc" id="Otherc">
+                        <label for="Otherc">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            
+            <div class="container">
+                <div>
+                    <label for="comments">  Comments: </label>
+                </div>
+
+                <div>
+                    <input class="comments" type="text" id="comments" name="comments">
+                </div>
+            </div>
+
+            <div align="center">
+                <input type="submit" value="Click to register">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </body>
+</html>
+    </body>
+</html>
