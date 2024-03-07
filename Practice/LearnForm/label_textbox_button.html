@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Label, Textbox, Button</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <label for="txtName">Nhập tên</label>
+        <input id="txtName" placeholder="enter a name" type="password" name="txtName" value="">
+        <br/>
+        <input name="range" type="range" min="1" max="20" value="1">
+        <br/>
+        <input name="number" type="number" min="0" max="20" step="2">
+        <br/>
+        <input type="email">
+        <br/>
+        <textarea rows="5" cols="30">Híu Hìn Híu Hìn Híu Hìn Híu Hìn Híu Hìn</textarea>
+        <br/>
+        <input type="file">
+        <br/>
+        <form>
+            Username: <input type="text" name="user">
+            <input type="submit" value="Submit">
+        </form>
+        
+        <form action="XuLyDangNhap.html">
+            <table>
+                <tr>
+                    <td colspan="2">Login System</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td><input type="text" id="username"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="Submit" value="Login">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
