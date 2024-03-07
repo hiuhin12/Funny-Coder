@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Home</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navigation-bar {
+            display: flex;
+            list-style: none;
+            border: 1px solid blue;
+            background-color: #6d6b6b;
+        }
+
+        .navigation-bar .about {
+            position: relative;
+            color: black;
+        }
+
+
+        .navigation-bar li:hover a {
+            color: white; 
+        }
+
+        .navigation-bar li:hover {
+            background-color: orange;
+        }
+
+        .navigation-bar .about:hover .sub-menu{
+            display: block;
+        }
+
+        .sub-menu{
+            list-style: none;
+            position: absolute;
+            border: 1px solid green;
+            padding: 0;
+            left: 0;
+            top: 100%;
+            display: none;
+        }
+
+        .navigation-bar a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 16px 32px;
+            font-weight: bold;
+        }
+
+        .navigation-bar a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        .navigation-bar li:hover a {
+            color: white;
+        }
+
+
+        .navigation-bar .about .sub-menu li {
+            padding: 0px;
+        }
+
+        .navigation-bar .sub-menu li a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navigation-bar">
+        <li>
+            <a href="#">HOME</a>
+        </li>
+        <li>
+            <a href="#">HTML</a>
+        </li>
+
+        <li class="about">
+            <a href="#">CSS</a>
+            <ul class="sub-menu">
+                <li><a href="#">BASIC CSS</a></li>
+                <li><a href="#">Graphic User Interface with CSS</a></li>
+                <li><a href="#">Advanced CSS</a></li>
+            </ul>
+        </li>   
+
+        <li class="about">
+            <a href="#">JAVASCRIPT</a>
+            <ul class="sub-menu">
+                <li><a href="#">LESSON 01</a></li>
+                <li><a href="#">LESSON 02</a></li>
+                <li><a href="#">LESSON 03</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">HTML DOM</a>
+        </li>
+        <li>
+            <a href="#">NGÔN NGỮ ASP</a>
+        </li>
+    </ul>
+    <script>
+        var mainBars = document.querySelectorAll('.main-bar');
+
+        mainBars.forEach(function(mainBar) {
+            var subBar = mainBar.querySelector('.sub-bar');
+            mainBar.addEventListener('mouseover', function() {
+                subBar.style.display = 'block';
+            });
+            mainBar.addEventListener('mouseout', function() {
+                subBar.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
