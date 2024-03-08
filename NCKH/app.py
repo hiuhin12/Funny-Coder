@@ -7,7 +7,7 @@ from flask import Flask, redirect, render_template, request, url_for
 
 
 # Load the Random Forest Classifier model
-filename = 'heart-disease-prediction-knn-model.pkl'
+filename = r'C:\Users\Admin\OneDrive - uel.edu.vn\Documents\GitHub\Funny-Coder\NCKH\heart-disease-prediction-knn-model.pkl'
 model = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
