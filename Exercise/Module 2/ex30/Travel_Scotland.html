@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
-        <title>Travel Scotland</title>
-        <style>
-            .header {
-                background-color: black;
-                color: orange;
-                text-align: center;
-                font-family: 'Old English Text MT', serif;
-                font-size: 36px;
-
-            }
-        </style>
+        <title>Travel Scotland!</title>
     </head>
-    <body>
-        <div class="header">Travel Scotland!</div>
-    </body>
+    <frameset rows="10%, *">
+        <frame src="Header.html" name="Header"></frame>
+        <frameset cols="40% 60%">
+            <frame src="images/Lake.jpg" name="menu_frame"></frame>
+            <frame src="Lake.html" name="main_frame"></frame>
+        </frameset>
+        
+    </frameset>
 </html>
