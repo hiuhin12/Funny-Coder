@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Tính giai thừa bằng Do while</title>
+        <script>
+            function tinhGiaiThua()
+            {
+                n=parseInt(myform.txtn.value)
+                i=1
+                gt=1
+                do
+                {
+                    gt=gt*i
+                    i++
+                }
+                while(i<=n);
+                document.getElementById("ketqua").innerText=gt
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <p>Nhập n:</p>
+            <input type="text" id="txtn">
+            <p id="ketqua"></p>
+            <button type="button" onclick="tinhGiaiThua()">Tính giai thừa</button>
+        </form>
+    </body>
+</html>

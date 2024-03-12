@@ -19,7 +19,18 @@
             b=Number(b)
             kq=document.getElementById("ketqua")
 
-            if (a==0 && )
+            if (a==0 && b==0)
+            {
+                kq.innerText="Vô số nghiệm"
+            }
+            else if (a==0 && b!=0)
+            {
+                kq.innerText="Vô nghiệm"
+            }
+            else
+            {
+                kq.innerText=(-b/a)
+            }
         }
 
         </script>

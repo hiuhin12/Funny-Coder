@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <script src="9.5-nhúng_vào_switch.js"></script>
+        <script>
+            function xuLy(a,b,pt)
+            {
+                kq=thuchienpheptoan(eval(a),eval(b),pt)
+                document.getElementById("ketqua").innerText=kq
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table border="1">
+                <tr>
+                    <td>Hệ số a:</td>
+                    <td>
+                        <input type="text" id="hsa">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hệ số b:</td>
+                    <td>
+                        <input type="text" id="hsb">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kết quả:</td>
+                    <td id="ketqua"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Cộng" onclick="xuLy(hsa.value,hsb.value,'+')">
+                        <input type="button" value="Trừ" onclick="xuLy(hsa.value,hsb.value,'-')">
+                        <input type="button" value="Nhân" onclick="xuLy(hsa.value,hsb.value,'*')">
+                        <input type="button" value="Chia" onclick="xuLy(hsa.value,hsb.value,'/')">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
