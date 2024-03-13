@@ -5,13 +5,16 @@
         <title>Vehicle Insurance Prediction</title>
         <link rel="stylesheet" href="style.css">
         <style>
-            body{
+
+            /* Thanh header */
+            body {
                 font-family: 'Michroma', Times, serif;
                 margin: 0px;
                 padding: 0px;
             }
     
             .header {
+                font-size: 12px;
                 display: flex;
                 list-style: none;
                 border: 1px solid #DD5C24;
@@ -21,7 +24,7 @@
             }
     
             .logo {
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: bold;
             }
 
@@ -37,7 +40,7 @@
             .sub-menu {
                 list-style: none;
                 position: absolute;
-                border: 1px solid green;
+                border: 1px solid #DD5C24;
                 padding: 0;
                 left: 0;
                 top: 100%;
@@ -51,7 +54,7 @@
                 font-weight: bold;
                 color: black;
             }
-            
+
             .header li:hover a:hover {
                 color: #F1EBE6;
                 background-color: #DD5C24;
@@ -61,24 +64,81 @@
                 color: black;
             }
 
+            /* Content chính */
+            .main-content {
+                background-image: url(NCKH/images/main-bg.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                text-align: center;
+                padding: 50px 20px;
+                color: #F1EBE6;
+            }
+
+            .main-content h1 {
+                font-size: 55px;
+                margin-top: 0px;
+            }
+
+            .main-content p {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                margin-bottom: 50px;
+            }
+
+            .main-button {
+                background-color: #DD5C24;
+                color: white;
+                padding: 12px 60px;
+                font-size: 20px;
+                cursor: pointer;
+                position: relative;
+                font-family: 'Montserrat';
+                border-radius: 100px;
+                border: none;
+                font-weight: bold;
+            }
+            
+            .main-button:hover {
+                background-color: #F1EBE6;
+                color: #2E2E2E;
+            }
+
+            /* Foooter */
+            .footer {
+                font-family: 'Montserrat';
+                text-align: center;
+                padding: 10px 0;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
+
         </style>
     </head>
     <body>
         <ul class="header">
             <div class="logo">HCT Team</div>
             <li><a href="home.html">HOME</a></li>
-    
-            <li class="predict">
+        <li class="predict">
                 <a href="predict.html">PREDICT</a>
                 <ul class="sub-menu">
                     <li><a href="enterinfor.html">Enter Information</a></li>
                     <li><a href="upload.html">Upload Data</a></li>
                 </ul>
             </li>   
-    
             <li><a href="blog.html">BLOG</a></li>
-    
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
+
+        <div class="main-content">
+            <h1>VEHICLE INSURANCE <br/>PREDICTION</h1>
+            <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms forecast your customer's insurance needs, offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
+            <input class="main-button" type="button" value="Predict Now!" onclick="">
+        </div>
+        
+        <div class="footer">
+            Made by HCT Team.
+        </div>
     </body>
 </html>
