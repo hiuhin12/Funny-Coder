@@ -79,11 +79,12 @@
             .main-content h1 {
                 font-size: 55px;
                 margin-top: 0px;
+                font-weight: bolder;
             }
 
             .main-content p {
                 font-family: 'Montserrat';
-                font-size: 18px;
+                font-size: 15px;
                 margin-bottom: 50px;
             }
 
@@ -97,7 +98,7 @@
                 font-family: 'Montserrat';
                 border-radius: 100px;
                 border: none;
-                font-weight: bold;
+                font-weight: 600;
                 margin-bottom: 40px;
             }
             
@@ -110,12 +111,92 @@
             .footer {
                 font-family: 'Montserrat';
                 text-align: center;
+                font-size: 15px;
             }
 
+            /* Used for */
             .used-for {
-                border: 1px solid #2E2E2E;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box; /* Đảm bảo padding và border không tăng kích thước tổng cộng */
+                width: calc(100% - 40px); /* Giảm 40px để bù cho padding 20px mỗi bên */
+                height: calc(100vh - 40px); /* Tương tự cho chiều cao nếu cần */
+                margin: 20px auto; /* Đây sẽ là khoảng cách từ mép trang */
+                padding: 20px; /* Đây sẽ tạo một khoảng trắng giữa nội dung và đường viền */
+                border: 1.5px solid #2E2E2E;
             }
 
+            .used-for h2 {
+                font-size: 35px;
+                font-weight: 900;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .box1 {
+                background: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                margin: 10px;
+                padding: 20px;
+                width: calc(50% - 20px); /* Subtract margin */
+                box-sizing: border-box;
+            }
+
+            .box1 h3 {
+                margin-top: 0;
+                background: #444;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .box1 p {
+                font-family: 'Montserrat';
+                font-size: 14px;
+            }
+
+            button {
+                background-color: #DD5C24;
+                border: none;
+                color: white;
+                padding: 10px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 100px;
+                font-family: 'Michroma';
+            }
+
+            button:hover {
+                background-color: #cc5d2d;
+            }
+
+            
+            /* Blog */
+            .header-image {
+                background-image: url('NCKH/images/blog.png'); /* Đường dẫn đến ảnh nền của bạn */
+                background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ khu vực div */
+                background-position: center; /* Căn giữa ảnh nền */
+                text-align: center; /* Căn chữ giữa theo chiều ngang */
+                height: 100px; /* Đặt chiều cao cho div */
+                display: flex;
+                align-items: center; /* Căn giữa chữ theo chiều dọc */
+                justify-content: center; /* Căn giữa chữ theo chiều ngang */
+              }
+              
+              .header-image h1 {
+                color: white; /* Màu chữ */
+                font-size: 20px; /* Kích cỡ chữ */
+                /* Thêm bất kỳ thuộc tính CSS khác cho chữ ở đây */
+              }
         </style>
     </head>
     <body>
@@ -144,19 +225,27 @@
 
         <!-- Used for -->
         <div class="used-for">
-            <h1>What's this website used for?</h1>
-                <div>
-                    <div class="card">
-                        <h2>For Salesman</h2>
+            <h2>What's this website used for?</h2>
+                <div class="box">
+                    <div class="box1">
+                        <h3>For Salesman</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                         <button>Enter Information</button>
                     </div>
-                    <div class="card">
-                        <h2>For Company</h2>
+                    <div class="box1">
+                        <h3>For Company</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                         <button>Upload Data</button>
                     </div>
                 </div>
         </div>
+
+        <!-- Blog -->
+        <div class="header-image">
+            <h1>BLOG</h1>
+          </div>
+
+            
+        
     </body>
 </html>

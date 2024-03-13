@@ -2,85 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Card Layout</title>
+    <title>Blog Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, h1, h2, p {
             margin: 0;
             padding: 0;
-            background: #ececec;
         }
         
-        .header {
+        .blog-header {
             text-align: center;
+            background: #e0e0e0; /* Chọn màu phù hợp */
             padding: 20px;
         }
         
-        .card-container {
+        .blog-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Đảm bảo các card sẽ xuống dòng trên màn hình nhỏ */
             padding: 20px;
         }
         
-        .card {
+        .blog-card {
             background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 30%; /* Hoặc bất kỳ kích thước nào bạn thích */
             margin: 10px;
-            padding: 20px;
-            width: calc(50% - 20px); /* Subtract margin */
-            box-sizing: border-box; /* Include padding and border in the element's width and height */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo hiệu ứng đổ bóng */
+            border-radius: 10px; /* Bo góc nếu cần */
         }
         
-        .card h2 {
-            margin-top: 0;
-            background: #444;
-            color: #fff;
-            padding: 10px;
+        .blog-card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .blog-card h2 {
+            padding: 15px;
+            background: #555; /* Màu nền tiêu đề */
+            color: #fff; /* Màu chữ */
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .blog-card p {
+            padding: 15px;
+            line-height: 1.6;
         }
         
         button {
-            background-color: #ff6700;
+            background: #ff6700; /* Màu nút */
+            color: #fff;
             border: none;
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            padding: 10px 20px;
             cursor: pointer;
+            display: block; /* Để nút không chiếm toàn bộ chiều rộng */
+            margin: 15px auto; /* Căn giữa nút */
         }
         
-        button:hover {
-            background-color: #e65c00;
+        .view-all button {
+            width: 100%; /* Nút View all chiếm toàn bộ chiều rộng của container */
+            padding: 20px; /* Đệm lớn hơn */
+            font-size: 1.2em; /* Chữ to hơn */
         }
         
+        /* Thêm đáp ứng cho màn hình nhỏ */
         @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-            }
-        
-            .card {
-                width: 100%;
-                max-width: 400px; /* Optional: To prevent cards from stretching too wide on small screens */
+            .blog-card {
+                width: 100%; /* Card chiếm toàn bộ chiều rộng trên màn hình nhỏ */
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>What's this website used for?</h1>
+    <div class="blog-header">
+        <h1>BLOG</h1>
     </div>
-    <div class="card-container">
-        <div class="card">
-            <h2>For Salesman</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-            <button>Enter Information</button>
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="NCKH/images/1.jpg" alt="Car Insurance">
+            <h2>Compare Car Insurance Rates in 2024</h2>
+            <p>Offer advice on how to compare insurance rates...</p>
+            <button>Details</button>
         </div>
-        <div class="card">
-            <h2>For Company</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-            <button>Upload Data</button>
+        <div class="blog-card">
+            <img src="NCKH/images/2.jpg" alt="Tesla Insurance">
+            <h2>Tesla Insurance hits nearly half a million in premiums</h2>
+            <p>Tesla Insurance achieved nearly half a billion dollars...</p>
+            <button>Details</button>
+        </div>
+        <div class="blog-card">
+            <img src="NCKH/images/3.jpg" alt="Car Insurance Types">
+            <h2>Types of Car Insurance: Compare 6 Coverage Options</h2>
+            <p>Offer advice on how to compare insurance rates...</p>
+            <button>Details</button>
+        </div>
+        <div class="view-all">
+            <button>View all</button>
         </div>
     </div>
 </body>
