@@ -1,99 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vehicle Insurance Prediction</title>
+    <meta charset="UTF-8">
+    <title>Card Layout</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ececec;
         }
         
         .header {
-            background: #333; /* Dark background for the header */
-            color: white;
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            margin-left: 20px;
-            font-size: 24px;
-        }
-        
-        .navigation ul {
-            list-style: none;
-            display: flex;
-            margin-right: 20px;
-        }
-        
-        .navigation ul li {
-            padding: 0 10px;
-        }
-        
-        .navigation ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .main-content {
-            background-image: url('path-to-your-background-image.jpg'); /* Replace with your image path */
-            background-size: cover;
             text-align: center;
-            padding: 50px 20px;
-            color: white;
+            padding: 20px;
         }
         
-        .main-content h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
+        .card-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
         
-        .main-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        .card {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            padding: 20px;
+            width: calc(50% - 20px); /* Subtract margin */
+            box-sizing: border-box; /* Include padding and border in the element's width and height */
         }
         
-        .main-content button {
-            background-color: orange;
+        .card h2 {
+            margin-top: 0;
+            background: #444;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        button {
+            background-color: #ff6700;
             border: none;
             color: white;
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
             cursor: pointer;
         }
         
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        button:hover {
+            background-color: #e65c00;
+        }
+        
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+            }
+        
+            .card {
+                width: 100%;
+                max-width: 400px; /* Optional: To prevent cards from stretching too wide on small screens */
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">HCT Team</div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#predict">PREDICT</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-        </nav>
+        <h1>What's this website used for?</h1>
     </div>
-    <div class="main-content">
-        <h1>VEHICLE INSURANCE PREDICTION</h1>
-        <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms forecast your customer's insurance needs, offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
-        <button onclick="location.href='#predict'">Predict Now!</button>
+    <div class="card-container">
+        <div class="card">
+            <h2>For Salesman</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <button>Enter Information</button>
+        </div>
+        <div class="card">
+            <h2>For Company</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <button>Upload Data</button>
+        </div>
     </div>
-    <footer>
-        Made by HCT Team.
-    </footer>
 </body>
 </html>

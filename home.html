@@ -11,6 +11,7 @@
                 font-family: 'Michroma', Times, serif;
                 margin: 0px;
                 padding: 0px;
+                background-color: #F1EBE6;
             }
     
             .header {
@@ -45,6 +46,7 @@
                 left: 0;
                 top: 100%;
                 display: none;
+                background-color: #F1EBE6;
             }
             
             .header a {
@@ -96,6 +98,7 @@
                 border-radius: 100px;
                 border: none;
                 font-weight: bold;
+                margin-bottom: 40px;
             }
             
             .main-button:hover {
@@ -107,18 +110,17 @@
             .footer {
                 font-family: 'Montserrat';
                 text-align: center;
-                padding: 10px 0;
-                position: absolute;
-                bottom: 0;
-                width: 100%;
             }
 
+            .used-for {
+                border: 1px solid #2E2E2E;
+            }
 
         </style>
     </head>
     <body>
         <ul class="header">
-            <div class="logo">HCT Team</div>
+            <div class="logo">HCT TEAM</div>
             <li><a href="home.html">HOME</a></li>
         <li class="predict">
                 <a href="predict.html">PREDICT</a>
@@ -135,10 +137,26 @@
             <h1>VEHICLE INSURANCE <br/>PREDICTION</h1>
             <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms forecast your customer's insurance needs, offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
             <input class="main-button" type="button" value="Predict Now!" onclick="">
+            <div class="footer">
+                Made by HCT Team.
+            </div>
         </div>
-        
-        <div class="footer">
-            Made by HCT Team.
+
+        <!-- Used for -->
+        <div class="used-for">
+            <h1>What's this website used for?</h1>
+                <div>
+                    <div class="card">
+                        <h2>For Salesman</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <button>Enter Information</button>
+                    </div>
+                    <div class="card">
+                        <h2>For Company</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <button>Upload Data</button>
+                    </div>
+                </div>
         </div>
     </body>
 </html>
