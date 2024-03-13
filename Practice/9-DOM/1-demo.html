@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <script>
+            function doInsert()
+            {
+                studentId=document.getElementById("studentId").value
+                studentName=document.getElementById("studentName").value
+                //alert("id="+studentId)
+                tbodyId=document.getElementById("tbodyId")
+                //create 1 tr
+                tr=document.createElement("tr")
+                //put tr into table
+                tbodyId.appendChild(tr)
+                //create td studentId
+                tdId=document.createElement("td")
+                tdId.innerHTML=studentId
+                //put td into tr
+                tr.appendChild(tdId)
+                //create td studentName
+                tdName=document.createElement("td")
+                tdName.innerHTML=studentName
+                //put td into tr
+                tr.appendChild(tdName)
+            }
+        </script>
+        <script>
+            datasets=[{"StudentId":"K214111971", "StudentName":"HH"},
+                        {"StudentId":"K214111971", "StudentName":"HH"},
+                        {"StudentId":"K214111971", "StudentName":"HH"},
+                    ]
+        </script>
+    </head>
+    <body>
+        <form id="studentForm">
+            <table>
+                <tr>
+                    <td>Student ID</td>
+                    <td>
+                        <input type="text" id="studentId">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td>
+                        <input type="text" id="studentName">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Insert" onclick="doInsert()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table border="1">
+            <caption>Students</caption>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyId">
+
+            </tbody>
+        </table>
+        <script>
+            function loadAllStudents()
+            {
+                for(i=0;i<datasets.length;i++)
+                {
+                    student=datasets[i]
+                    studentId=student.StudentId
+                    studentName=student.StudentName
+                    tr=document.createElement("tr")
+                    //put tr into table
+                    tbodyId.appendChild(tr)
+                    //create td studentId
+                    tdId=document.createElement("td")
+                    tdId.innerHTML=studentId
+                    //put td into tr
+                    tr.appendChild(tdId)
+                    //create td studentName
+                    tdName=document.createElement("td")
+                    tdName.innerHTML=studentName
+                    //put td into tr
+                    tr.appendChild(tdName)
+                }
+            }
+            loadAllStudents()
+        </script>
+    </body>
+</html>
