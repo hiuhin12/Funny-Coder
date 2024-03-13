@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>AJAX</title>
+        <script>
+            function loadStudents() {
+                var xhr = new XMLHttpRequest()
+                xhr.open("GET", "datasets/students.xml", true)
+                xhr.send();
+                xhr.onreadystatechange = function() {
+                  if (xhr.readyState == 4 && xhr.status == 200) {
+                    var xmlDoc = xhr.responseXML;
+                    var students = xmlDoc.getElementsByTagName("student")
+                    var tbodyid = document.getElementById("tbodyid")
+                    tbodyid.innerHTML = ""; 
+                    for (i = 0; i < students.length; i++) {
+                      var id = students[i].getElementsByTagName("id")[0].childNodes[0].nodeValue
+                      var name = students[i].getElementsByTagName("name")[0].childNodes[0].nodeValue
+                      var birthday = students[i].getElementsByTagName("birthday")[0].childNodes[0].nodeValue
+                      var gender = students[i].getElementsByTagName("gender")[0].childNodes[0].nodeValue
+              
+                      
+                      var tr = document.createElement("tr")
+                      var tdId = document.createElement("td")
+                      var tdName = document.createElement("td")
+                      var tdBirthday = document.createElement("td")
+                      var tdGender = document.createElement("td")
+              
+                      
+                      tdId.textContent = id
+                      tdName.textContent = name
+                      tdBirthday.textContent = birthday
+                      tdGender.textContent = gender
+              
+                      
+                      tr.appendChild(tdId)
+                      tr.appendChild(tdName)
+                      tr.appendChild(tdBirthday)
+                      tr.appendChild(tdGender)
+              
+                      
+                      tbodyid.appendChild(tr)
+                    }
+                  }
+                 
+                }
+              }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Birthday</td>
+                    <td>Gender</td>
+                </tr>
+            </thead>
+            <tbody id="tbodyid">
+
+            </tbody>
+        </table>
+        <script>
+            loadStudents()
+        </script>
+    </body>
+</html>

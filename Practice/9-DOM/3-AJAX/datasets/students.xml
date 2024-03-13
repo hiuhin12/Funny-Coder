@@ -1,0 +1,20 @@
+<student>
+    <student>
+        <id>001</id>
+        <name>HH</name>
+        <birthday>12/09/2003</birthday>
+        <gender>Female</gender>
+    </student>
+    <student>
+        <id>002</id>
+        <name>MT</name>
+        <birthday>15/05/2003</birthday>
+        <gender>Male</gender>
+    </student>
+    <student>
+        <id>003</id>
+        <name>BT</name>
+        <birthday>16/10/2006</birthday>
+        <gender>Female</gender>
+    </student>
+</student>
