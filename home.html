@@ -149,7 +149,7 @@
 
             .box1 h3 {
                 margin-top: 0;
-                background: #444;
+                background: #585858;
                 color: #fff;
                 padding: 10px;
                 text-align: center;
@@ -167,12 +167,13 @@
                 padding: 10px 25px;
                 text-align: center;
                 text-decoration: none;
-                display: inline-block;
+                display: block;
                 font-size: 14px;
-                margin: 4px 2px;
+                margin: 4px auto;
                 cursor: pointer;
                 border-radius: 100px;
                 font-family: 'Michroma';
+                font-weight: 400;
             }
 
             button:hover {
@@ -181,7 +182,7 @@
 
             
             /* Blog */
-            .header-image {
+            .blog-image {
                 background-image: url('NCKH/images/blog.png'); /* Đường dẫn đến ảnh nền của bạn */
                 background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ khu vực div */
                 background-position: center; /* Căn giữa ảnh nền */
@@ -190,16 +191,59 @@
                 display: flex;
                 align-items: center; /* Căn giữa chữ theo chiều dọc */
                 justify-content: center; /* Căn giữa chữ theo chiều ngang */
-              }
+            }
               
-              .header-image h1 {
-                color: white; /* Màu chữ */
-                font-size: 26px; /* Kích cỡ chữ */
-                /* Thêm bất kỳ thuộc tính CSS khác cho chữ ở đây */
-              }
+            .blog-image h1 {
+                color: white;
+                font-size: 30px; 
+            }
+
+            .blog-container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap; /* Đảm bảo các card sẽ xuống dòng trên màn hình nhỏ */
+                padding: 20px;
+            }
+
+            .container {
+                background: #fff;
+                width: 30%; /* Hoặc bất kỳ kích thước nào bạn thích */
+                margin: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo hiệu ứng đổ bóng */
+                border-radius: 10px;
+            }
+
+            .container img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .container h3 {
+                font-size: 18px;
+                padding: 15px;
+                background: #555; /* Màu nền tiêu đề */
+                color: #fff; /* Màu chữ */
+                border-radius: 0 0 10px 10px;
+                margin: 0;
+                font-family: 'Montserrat';
+                font-weight: 600;
+            }
+            
+            .container p {
+                font-size: 14px;
+                padding: 15px;
+                line-height: 1.6;
+                font-family: 'Montserrat';
+            }
+
+            .container button {
+                margin-bottom: 20px;
+            }
+
         </style>
     </head>
     <body>
+        <!-- Header menu -->
         <ul class="header">
             <div class="logo">HCT TEAM</div>
             <li><a href="home.html">HOME</a></li>
@@ -214,6 +258,7 @@
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
 
+        <!-- Main content -->
         <div class="main-content">
             <h1>VEHICLE INSURANCE <br/>PREDICTION</h1>
             <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms forecast your customer's insurance needs, offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
@@ -241,11 +286,32 @@
         </div>
 
         <!-- Blog -->
-        <div class="header-image">
+        <div class="blog-image">
             <h1>BLOG</h1>
-          </div>
-
+        </div>
+        <div class="blog-container">
+            <div class="container">
+                <img src="NCKH/images/1.jpg" alt="Car Insurance">
+                <h3>Compare Car Insurance Rates in 2024</h3>
+                <p>Offer advice on how to compare insurance rates, explain the factors that affect insurance premiums, and possibly provide tips on saving money on car insurance. Discuss the importance of understanding coverage options and how to choose a policy that best fits the individual's needs and budget.</p>
+                <button>Details</button>
+            </div>
+            <div class="container">
+                <img src="NCKH/images/2.jpg" alt="Tesla Insurance">
+                <h3>Tesla Insurance hits nearly half a million in premiums</h3>
+                <p>Tesla Insurance achieved nearly half a billion dollars in written premiums in 2023, an impressive feat highlighting a 115% year-on-year growth. Despite this financial success, the venture continues to face financial challenges, with some states showing a combined ratio of 145%.</p>
+                <button>Details</button>
+            </div>
+            <div class="container">
+                <img src="NCKH/images/3.jpg" alt="Car Insurance Types">
+                <h3>Types of Car Insurance: Compare 6 Coverage Options</h3>
+                <p>Car insurance policies can offer various types of coverage, such as liability for damages or injuries you cause, collision for damage to your own vehicle, comprehensive for non-collision damage, and personal injury protection or medical payments for injuries. Each provides financial safety nets.</p>
+                <button>Details</button>
+            </div>
+        </div>
             
+        <!-- Contact us -->
+        
         
     </body>
 </html>

@@ -2,100 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog Page</title>
+    <title>Contact Page</title>
     <style>
-        body, h1, h2, p {
+        body, h2, h3, p {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
         
-        .blog-header {
-            text-align: center;
-            background: #e0e0e0; /* Chọn màu phù hợp */
-            padding: 20px;
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
         
-        .blog-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap; /* Đảm bảo các card sẽ xuống dòng trên màn hình nhỏ */
-            padding: 20px;
-        }
-        
-        .blog-card {
-            background: #fff;
-            width: 30%; /* Hoặc bất kỳ kích thước nào bạn thích */
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo hiệu ứng đổ bóng */
-            border-radius: 10px; /* Bo góc nếu cần */
-        }
-        
-        .blog-card img {
+        .contact-container {
+            background-image: url('your-image-path.jpg');
+            background-size: cover;
+            background-position: center;
             width: 100%;
-            border-radius: 10px 10px 0 0;
+            max-width: 400px; /* Adjust the width as per your design */
+            margin: auto;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
-        .blog-card h2 {
+        .contact-container h2 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: rgba(255,255,255,0.9);
+        }
+        
+        .contact-form button {
             padding: 15px;
-            background: #555; /* Màu nền tiêu đề */
-            color: #fff; /* Màu chữ */
-            border-radius: 0 0 10px 10px;
-        }
-        
-        .blog-card p {
-            padding: 15px;
-            line-height: 1.6;
-        }
-        
-        button {
-            background: #ff6700; /* Màu nút */
-            color: #fff;
             border: none;
-            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            font-size: 16px;
             cursor: pointer;
-            display: block; /* Để nút không chiếm toàn bộ chiều rộng */
-            margin: 15px auto; /* Căn giữa nút */
         }
         
-        .view-all button {
-            width: 100%; /* Nút View all chiếm toàn bộ chiều rộng của container */
-            padding: 20px; /* Đệm lớn hơn */
-            font-size: 1.2em; /* Chữ to hơn */
+        .contact-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            margin-top: 20px;
         }
         
-        /* Thêm đáp ứng cho màn hình nhỏ */
+        .team-members {
+            width: 55%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .member {
+            width: 48%;
+            background: #fff;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        .member h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .member p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
         @media (max-width: 768px) {
-            .blog-card {
-                width: 100%; /* Card chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+            .contact-section {
+                flex-direction: column;
+            }
+        
+            .contact-form,
+            .team-members {
+                width: 100%;
+            }
+        
+            .member {
+                width: 100%;
             }
         }
+        
     </style>
 </head>
 <body>
-    <div class="blog-header">
-        <h1>BLOG</h1>
+    <div class="contact-container">
+        <h2>CONTACT US</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="contact-info">
+            <p>Faculty of Information Systems, University of Economics and Law</p>
+            <p>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</p>
+            <p>(+84) 817 422 199</p>
+        </div>
     </div>
-    <div class="blog-container">
-        <div class="blog-card">
-            <img src="NCKH/images/1.jpg" alt="Car Insurance">
-            <h2>Compare Car Insurance Rates in 2024</h2>
-            <p>Offer advice on how to compare insurance rates...</p>
-            <button>Details</button>
-        </div>
-        <div class="blog-card">
-            <img src="NCKH/images/2.jpg" alt="Tesla Insurance">
-            <h2>Tesla Insurance hits nearly half a million in premiums</h2>
-            <p>Tesla Insurance achieved nearly half a billion dollars...</p>
-            <button>Details</button>
-        </div>
-        <div class="blog-card">
-            <img src="NCKH/images/3.jpg" alt="Car Insurance Types">
-            <h2>Types of Car Insurance: Compare 6 Coverage Options</h2>
-            <p>Offer advice on how to compare insurance rates...</p>
-            <button>Details</button>
-        </div>
-        <div class="view-all">
-            <button>View all</button>
+        <div class="team-members">
+            <!-- Member 1 -->
+            <div class="member">
+                <img src="member1.jpg" alt="Vo Minh Thanh">
+                <h3>Vo Minh Thanh</h3>
+                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+            </div>
+            <!-- Other members... -->
+            <div class="member">
+                <img src="member1.jpg" alt="Vo Minh Thanh">
+                <h3>Vo Minh Thanh</h3>
+                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+            </div>
+            <div class="member">
+                <img src="member1.jpg" alt="Vo Minh Thanh">
+                <h3>Vo Minh Thanh</h3>
+                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+            </div>
+            <div class="member">
+                <img src="member1.jpg" alt="Vo Minh Thanh">
+                <h3>Vo Minh Thanh</h3>
+                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+            </div>
+            <div class="member">
+                <img src="member1.jpg" alt="Vo Minh Thanh">
+                <h3>Vo Minh Thanh</h3>
+                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+            </div>
         </div>
     </div>
 </body>
