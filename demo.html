@@ -2,50 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header Example</title>
+    <title>Contact Page</title>
     <style>
-        /* Thêm các định kiểu cơ bản, bạn cần điều chỉnh cho phù hợp với thiết kế của bạn */
-        body {
+        body, h2, h3, p {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
         }
-        .header {
-            background-color: #F1EBE6;
-            padding: 10px 0;
+        
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            flex-wrap: wrap; /* Ensure it's responsive */
+        }
+        
+        .contact-form, .team-members {
+            width: 50%; /* Make both main sections half of the container */
+            box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+        }
+        
+        .contact-form {
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        
+        .contact-form h2 {
+            color: #fff;
+            background: #333;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: calc(100% - 20px); /* Subtract the padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .contact-form button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .member {
             display: flex;
             align-items: center;
-            justify-content: space-around; /* Điều chỉnh khoảng cách giữa các item */
+            background: #fff; /* or any other color */
+            padding: 20px;
+            margin: 5px;
+            width: calc(70% - 10px);
+            border-radius: 10px; /* optional */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* optional */
         }
-        .header .logo {
-            font-size: 24px;
-            color: #2E2E2E;
+        
+        .member img {
+            width: 100px; /* fixed size */
+            height: 100px; /* fixed size */
+            object-fit: cover; /* ensures the image covers the area */
+            flex-shrink: 0; /* ensures the image does not shrink */
+            border-radius: 50%; /* circular image */
+            overflow: hidden; /* ensures the image stays within the circular boundary */
+            margin-right: 20px;
         }
-        .header nav {
-            display: flex;
+        
+        .member-info {
+            text-align: left;
         }
-        .header nav a {
-            text-decoration: none;
-            color: #2E2E2E;
-            padding: 0 15px;
-            font-weight: bold;
+        
+        .member-info h3 {
+            margin-bottom: 10px;
         }
-        .header nav a:hover {
-            color: #DD5C24;
+        
+        .member-info p {
+            margin: 0;
+            color: #666; /* Lighter text color */
+            font-size: 0.9em; /* smaller font size */
         }
+        
+        
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            HCT TEAM
+    <div class="contact-section">
+        <div class="contact-form">
+            <h2>CONTACT US</h2>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="E-mail">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
         </div>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="products.html">PRODUCT</a>
-            <a href="blog.html">BLOG</a>
-            <a href="contact.html">CONTACT US</a>
-        </nav>
-    </header>
+        <div class="team-members">
+            <!-- Member 1 -->
+            <div class="member">
+                <img src="NCKH/images/1.jpg" alt="Vo Minh Thanh">
+                    <div class="member-info">
+                        <h3>Vo Minh Thanh</h3>
+                        <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+                    </div>
+            </div>
+            <div class="member">
+                <img src="NCKH/images/1.jpg" alt="Vo Minh Thanh">
+                    <div class="member-info">
+                        <h3>Vo Minh Thanh</h3>
+                        <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+                    </div>
+            </div>
+            <!-- Other members... -->
+        </div>
+    </div>
 </body>
 </html>

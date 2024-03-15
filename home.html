@@ -121,21 +121,24 @@
                 padding: 0;
                 box-sizing: border-box; /* Đảm bảo padding và border không tăng kích thước tổng cộng */
                 width: calc(100% - 40px); /* Giảm 40px để bù cho padding 20px mỗi bên */
-                height: calc(100vh - 40px); /* Tương tự cho chiều cao nếu cần */
+                height: 345px; /* Tương tự cho chiều cao nếu cần */
                 margin: 20px auto; /* Đây sẽ là khoảng cách từ mép trang */
                 padding: 20px; /* Đây sẽ tạo một khoảng trắng giữa nội dung và đường viền */
                 border: 1.5px solid #2E2E2E;
             }
 
             .used-for h2 {
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: 900;
+                margin-bottom: 0;
+                margin-top: 0;
             }
 
             .box {
                 display: flex;
                 justify-content: center;
-                padding: 20px;
+                padding: 0;
+ 
             }
 
             .box1 {
@@ -158,6 +161,7 @@
             .box1 p {
                 font-family: 'Montserrat';
                 font-size: 14px;
+                text-align: justify;
             }
 
             button {
@@ -240,6 +244,97 @@
                 margin-bottom: 20px;
             }
 
+            /* Contact */
+            hr {
+                size: 15px;
+            }
+
+            .contact-container {
+                background-image: url('NCKH/images/contact.png');
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                max-width: 400px; /* Adjust the width as per your design */
+                margin: auto;
+                color: white;
+                text-align: center;
+                padding: 40px 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                
+            }
+
+            .contact-container h2 {
+                margin-bottom: 20px;
+            }
+            
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                margin-bottom: 15px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                background: rgba(255,255,255,0.9);
+            }
+
+            .contact-info {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 15px;
+                margin-top: 20px;
+                font-family: 'Montserrat';
+                font-size: 12px;
+            }
+
+            .team-members {
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .member {
+                display: flex;
+                align-items: center;
+                background: #fff; /* or any other color */
+                padding: 20px;
+                margin: 2px;
+                width: calc(50% - 10px);
+                height: 80px;
+                border-radius: 10px; /* optional */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .member img {
+                width: 80px; /* fixed size */
+                height: 80px; /* fixed size */
+                object-fit: cover; /* ensures the image covers the area */
+                flex-shrink: 0; /* ensures the image does not shrink */
+                border-radius: 10%; /* circular image */
+                overflow: hidden; /* ensures the image stays within the circular boundary */
+                margin-right: 20px;
+            }
+
+            .member-info {
+                text-align: left;
+            }
+            
+            .member-info h4 {
+                font-size: 15px;
+                margin-bottom: 10px;
+                font-family: 'Montserrat';
+            }
+            
+            .member-info p {
+                color: #666; /* Lighter text color */
+                font-size: 0.9em; /* smaller font size */
+                font-family: 'Montserrat';
+                font-size: 12.5px;
+            }
+
+
         </style>
     </head>
     <body>
@@ -274,12 +369,12 @@
                 <div class="box">
                     <div class="box1">
                         <h3>For Salesman</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <p>Click to enter customer info and instantly see their interests or segmentation. Our analytics simplify profiling, boosting engagement strategies.</p>
                         <button>Enter Information</button>
                     </div>
                     <div class="box1">
                         <h3>For Company</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <p>Just upload customer data to instantly view their interests and segmentation. Our analytics enhance profiling and strategy, offering a broader view of your customers.</p>
                         <button>Upload Data</button>
                     </div>
                 </div>
@@ -311,7 +406,59 @@
         </div>
             
         <!-- Contact us -->
-        
-        
+        <hr> 
+        <div class="contact-container">
+            <h2>CONTACT US</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>Faculty of Information Systems, University of Economics and Law</p>
+                <p>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</p>
+                <p>(+84) 817 422 199</p>
+            </div>
+        </div>
+            <div class="team-members">
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Minh Thanh">
+                        <div class="member-info">
+                            <h4>Vo Minh Thanh</h4>
+                            <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Anh Khoa">
+                        <div class="member-info">
+                            <h4>Tran Anh Khoa</h4>
+                            <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Hieu Hien">
+                        <div class="member-info">
+                            <h4>Nguyen Trung Hieu Hien</h4>
+                            <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Quoc Huy">
+                        <div class="member-info">
+                            <h4>Nguyen Quoc Huy</h4>
+                            <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Thanh Truc">
+                        <div class="member-info">
+                            <h4>Huynh Thi Thanh Truc</h4>
+                            <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <hr>
     </body>
 </html>
