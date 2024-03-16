@@ -288,6 +288,19 @@
                 font-size: 12px;
             }
 
+            .contact-us {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start; /* Để các item không bị kéo căng nếu khác chiều cao */
+                padding: 20px;
+                flex-wrap: wrap; /* Để các item chuyển xuống dòng trên màn hình nhỏ */
+            }
+            
+            .contact-container,
+            .team-members {
+                width: 50%; /* Đặt mỗi phần chiếm nửa màn hình */
+                /* box-sizing: border-box; Đã có ở phía trên trong CSS của bạn */
+            }
             .team-members {
                 width: 70%;
                 display: flex;
@@ -408,54 +421,56 @@
         <!-- Contact us -->
         <hr> 
         <div class="contact-container">
-            <h2>CONTACT US</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div class="contact-info">
-                <p>Faculty of Information Systems, University of Economics and Law</p>
-                <p>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</p>
-                <p>(+84) 817 422 199</p>
+            <div class="contact-container">
+                <h2>CONTACT US</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <div class="contact-info">
+                    <p>Faculty of Information Systems, University of Economics and Law</p>
+                    <p>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</p>
+                    <p>(+84) 817 422 199</p>
+                </div>
             </div>
-        </div>
-            <div class="team-members">
-                <div class="member">
-                    <img src="NCKH/images/1.jpg" alt="Minh Thanh">
-                        <div class="member-info">
-                            <h4>Vo Minh Thanh</h4>
-                            <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
-                        </div>
-                </div>
-                <div class="member">
-                    <img src="NCKH/images/1.jpg" alt="Anh Khoa">
-                        <div class="member-info">
-                            <h4>Tran Anh Khoa</h4>
-                            <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
-                        </div>
-                </div>
-                <div class="member">
-                    <img src="NCKH/images/1.jpg" alt="Hieu Hien">
-                        <div class="member-info">
-                            <h4>Nguyen Trung Hieu Hien</h4>
-                            <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
-                        </div>
-                </div>
-                <div class="member">
-                    <img src="NCKH/images/1.jpg" alt="Quoc Huy">
-                        <div class="member-info">
-                            <h4>Nguyen Quoc Huy</h4>
-                            <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
-                        </div>
-                </div>
-                <div class="member">
-                    <img src="NCKH/images/1.jpg" alt="Thanh Truc">
-                        <div class="member-info">
-                            <h4>Huynh Thi Thanh Truc</h4>
-                            <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
-                        </div>
+                <div class="team-members">
+                    <div class="member">
+                        <img src="NCKH/images/1.jpg" alt="Minh Thanh">
+                            <div class="member-info">
+                                <h4>Vo Minh Thanh</h4>
+                                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+                            </div>
+                    </div>
+                    <div class="member">
+                        <img src="NCKH/images/1.jpg" alt="Anh Khoa">
+                            <div class="member-info">
+                                <h4>Tran Anh Khoa</h4>
+                                <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
+                            </div>
+                    </div>
+                    <div class="member">
+                        <img src="NCKH/images/1.jpg" alt="Hieu Hien">
+                            <div class="member-info">
+                                <h4>Nguyen Trung Hieu Hien</h4>
+                                <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
+                            </div>
+                    </div>
+                    <div class="member">
+                        <img src="NCKH/images/1.jpg" alt="Quoc Huy">
+                            <div class="member-info">
+                                <h4>Nguyen Quoc Huy</h4>
+                                <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
+                            </div>
+                    </div>
+                    <div class="member">
+                        <img src="NCKH/images/1.jpg" alt="Thanh Truc">
+                            <div class="member-info">
+                                <h4>Huynh Thi Thanh Truc</h4>
+                                <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
