@@ -119,11 +119,11 @@
                 text-align: center;
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box; /* Đảm bảo padding và border không tăng kích thước tổng cộng */
-                width: calc(100% - 40px); /* Giảm 40px để bù cho padding 20px mỗi bên */
-                height: 345px; /* Tương tự cho chiều cao nếu cần */
-                margin: 20px auto; /* Đây sẽ là khoảng cách từ mép trang */
-                padding: 20px; /* Đây sẽ tạo một khoảng trắng giữa nội dung và đường viền */
+                box-sizing: border-box; 
+                width: calc(100% - 40px); 
+                height: 345px; 
+                margin: 20px auto; 
+                padding: 20px; 
                 border: 1.5px solid #2E2E2E;
             }
 
@@ -146,7 +146,7 @@
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                 margin: 10px;
                 padding: 20px;
-                width: calc(50% - 20px); /* Subtract margin */
+                width: calc(50% - 20px); 
                 box-sizing: border-box;
             }
 
@@ -187,14 +187,14 @@
             
             /* Blog */
             .blog-image {
-                background-image: url('NCKH/images/blog.png'); /* Đường dẫn đến ảnh nền của bạn */
-                background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ khu vực div */
-                background-position: center; /* Căn giữa ảnh nền */
-                text-align: center; /* Căn chữ giữa theo chiều ngang */
-                height: 80px; /* Đặt chiều cao cho div */
+                background-image: url('NCKH/images/blog.png'); 
+                background-size: cover; 
+                background-position: center; 
+                text-align: center; 
+                height: 80px; 
                 display: flex;
-                align-items: center; /* Căn giữa chữ theo chiều dọc */
-                justify-content: center; /* Căn giữa chữ theo chiều ngang */
+                align-items: center; 
+                justify-content: center; 
             }
               
             .blog-image h1 {
@@ -205,15 +205,15 @@
             .blog-container {
                 display: flex;
                 justify-content: space-around;
-                flex-wrap: wrap; /* Đảm bảo các card sẽ xuống dòng trên màn hình nhỏ */
+                flex-wrap: wrap;
                 padding: 20px;
             }
 
             .container {
                 background: #fff;
-                width: 30%; /* Hoặc bất kỳ kích thước nào bạn thích */
+                width: 30%; 
                 margin: 10px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo hiệu ứng đổ bóng */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
                 border-radius: 10px;
             }
 
@@ -225,8 +225,8 @@
             .container h3 {
                 font-size: 18px;
                 padding: 15px;
-                background: #555; /* Màu nền tiêu đề */
-                color: #fff; /* Màu chữ */
+                background: #555; 
+                color: #fff; 
                 border-radius: 0 0 10px 10px;
                 margin: 0;
                 font-family: 'Montserrat';
@@ -248,28 +248,29 @@
             hr {
                 size: 15px;
             }
-
             .contact-container {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                flex-wrap: wrap; 
+            }
+            .contact-form {
                 background-image: url('NCKH/images/contact.png');
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                max-width: 400px; /* Adjust the width as per your design */
+                max-width: 400px; 
                 margin: auto;
                 color: white;
                 text-align: center;
                 padding: 40px 20px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-                
-            }
-
-            .contact-container h2 {
-                margin-bottom: 20px;
-            }
-            
-            .contact-form {
                 display: flex;
                 flex-direction: column;
+            }
+
+            .contact-form h2 {
+                margin-bottom: 40px;
             }
 
             .contact-form input,
@@ -291,47 +292,36 @@
             .contact-us {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start; /* Để các item không bị kéo căng nếu khác chiều cao */
+                align-items: flex-start; 
                 padding: 20px;
-                flex-wrap: wrap; /* Để các item chuyển xuống dòng trên màn hình nhỏ */
+                flex-wrap: wrap;
             }
             
-            .contact-container,
-            .team-members {
-                width: 50%; /* Đặt mỗi phần chiếm nửa màn hình */
-                /* box-sizing: border-box; Đã có ở phía trên trong CSS của bạn */
-            }
-            .team-members {
-                width: 70%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+            .contact-form, .team-members {
+                width: 50%; 
+                box-sizing: border-box;
             }
 
             .member {
                 display: flex;
                 align-items: center;
-                background: #fff; /* or any other color */
+                background: #fff;
                 padding: 20px;
                 margin: 2px;
-                width: calc(50% - 10px);
-                height: 80px;
-                border-radius: 10px; /* optional */
+                width: 60%;
+                height: 70px;
+                border-radius: 10px; 
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             }
 
             .member img {
-                width: 80px; /* fixed size */
-                height: 80px; /* fixed size */
-                object-fit: cover; /* ensures the image covers the area */
-                flex-shrink: 0; /* ensures the image does not shrink */
-                border-radius: 10%; /* circular image */
-                overflow: hidden; /* ensures the image stays within the circular boundary */
+                width: 80px;
+                height: 80px; 
+                object-fit: cover; 
+                flex-shrink: 0; 
+                border-radius: 10%; 
+                overflow: hidden; 
                 margin-right: 20px;
-            }
-
-            .member-info {
-                text-align: left;
             }
             
             .member-info h4 {
@@ -341,13 +331,12 @@
             }
             
             .member-info p {
-                color: #666; /* Lighter text color */
-                font-size: 0.9em; /* smaller font size */
+                color: #666; 
                 font-family: 'Montserrat';
                 font-size: 12.5px;
+                text-align: left;
             }
-
-
+            
         </style>
     </head>
     <body>
@@ -421,56 +410,54 @@
         <!-- Contact us -->
         <hr> 
         <div class="contact-container">
-            <div class="contact-container">
+            <div class="contact-form">
                 <h2>CONTACT US</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            
                 <div class="contact-info">
                     <p>Faculty of Information Systems, University of Economics and Law</p>
                     <p>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</p>
                     <p>(+84) 817 422 199</p>
                 </div>
             </div>
-                <div class="team-members">
-                    <div class="member">
-                        <img src="NCKH/images/1.jpg" alt="Minh Thanh">
-                            <div class="member-info">
-                                <h4>Vo Minh Thanh</h4>
-                                <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
-                            </div>
-                    </div>
-                    <div class="member">
-                        <img src="NCKH/images/1.jpg" alt="Anh Khoa">
-                            <div class="member-info">
-                                <h4>Tran Anh Khoa</h4>
-                                <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
-                            </div>
-                    </div>
-                    <div class="member">
-                        <img src="NCKH/images/1.jpg" alt="Hieu Hien">
-                            <div class="member-info">
-                                <h4>Nguyen Trung Hieu Hien</h4>
-                                <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
-                            </div>
-                    </div>
-                    <div class="member">
-                        <img src="NCKH/images/1.jpg" alt="Quoc Huy">
-                            <div class="member-info">
-                                <h4>Nguyen Quoc Huy</h4>
-                                <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
-                            </div>
-                    </div>
-                    <div class="member">
-                        <img src="NCKH/images/1.jpg" alt="Thanh Truc">
-                            <div class="member-info">
-                                <h4>Huynh Thi Thanh Truc</h4>
-                                <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
-                            </div>
-                    </div>
+            <div class="team-members">
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Minh Thanh">
+                        <div class="member-info">
+                            <h4>Vo Minh Thanh</h4>
+                            <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Anh Khoa">
+                        <div class="member-info">
+                            <h4>Tran Anh Khoa</h4>
+                            <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Hieu Hien">
+                        <div class="member-info">
+                            <h4>Nguyen Trung Hieu Hien</h4>
+                            <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Quoc Huy">
+                        <div class="member-info">
+                            <h4>Nguyen Quoc Huy</h4>
+                            <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
+                        </div>
+                </div>
+                <div class="member">
+                    <img src="NCKH/images/1.jpg" alt="Thanh Truc">
+                        <div class="member-info">
+                            <h4>Huynh Thi Thanh Truc</h4>
+                            <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
+                        </div>
                 </div>
             </div>
         </div>
