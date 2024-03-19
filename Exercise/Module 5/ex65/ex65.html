@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <input type="submit" name="addNode" id="addNode" value="Add Node" onclick="addNode()"/>
+                </td>
+                <td>
+                    <label for="content">Content</label>
+                    <input type="text" name="content" id="content"/>
+                </td>
+                <td>
+                    <label for="position">Position</label>
+                    <input type="number" name="position" id="position"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="removeNode" id="removeNode" value="Remove Node" onclick="removeNode()"/>
+                </td>
+                <td></td>
+                <td>
+                    <label for="positionRe">Position</label>
+                    <input type="number" name="positionRe" id="positionRe"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="modifyNode" id="modify" value="Modify Node" onclick="modifyNode()"/>
+                </td>
+                <td>
+                    <label for="newcontent">New Content</label>
+                    <input type="text" name="newcontent" id="newcontent"/>
+                </td>
+                <td>
+                    <label for="position2">Position</label>
+                    <input type="number" name="position2" id="position2"/>
+                </td>
+            </tr>
+        </table>
+
+        <p> Web Node</p>
+        <div id="webNodeList">
+            <ul>
+                <li>Data base</li>
+                <li>Web1</li>
+                <li>Web2</li>
+            </ul>
+        </div>
+
+        <script>
+            function addNode() {
+                var content = document.getElementById("content").value;
+                var position = document.getElementById("position").value;
+                var list = document.querySelector("#webNodeList ul");
+                var newItem = document.createElement("li");
+                newItem.textContent = content;
+
+                if(position === "" || position - 1 > list.children.length) {
+                    list.appendChild(newItem);
+                } else {
+                    list.insertBefore(newItem, list.children[position - 1]);
+                }
+            }
+
+            function removeNode() {
+                var position = document.getElementById("positionRe").value;
+                var list = document.querySelector("#webNodeList ul");
+                if(position - 1 < list.children.length && position - 1 >= 0) {
+                    list.removeChild(list.children[position - 1]);
+                }
+            }
+
+            function modifyNode() {
+                var newContent = document.getElementById("newcontent").value;
+                var position = document.getElementById("position2").value;
+                var list = document.querySelector("#webNodeList ul");
+                if(position - 1 < list.children.length && position - 1 >= 0) {
+                    list.children[position - 1].textContent = newContent;
+                }
+            }
+        </script>
+    </body>
+</html>
