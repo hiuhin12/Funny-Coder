@@ -2,120 +2,195 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKT Team Form</title>
     <style>
-        body, h2, h3, p {
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
-        .contact-section {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            flex-wrap: wrap; /* Ensure it's responsive */
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
-        
-        .contact-form, .team-members {
-            width: 50%; /* Make both main sections half of the container */
-            box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+
+        .form-container {
+            max-width: 600px;
+            margin: 80px auto 20px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-        .contact-form {
-            background: #f2f2f2;
-            padding: 20px;
-        }
-        
-        .contact-form h2 {
-            color: #fff;
-            background: #333;
+
+        h1 {
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
             padding: 10px;
         }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: calc(100% - 20px); /* Subtract the padding */
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
+
+        .column label {
+            display: block;
+            margin: 10px 0 5px;
         }
-        
-        .contact-form button {
-            width: calc(100% - 20px);
+
+        .column input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Clearfix for columns */
+        .form-container::after {
+            content: "";
+            clear: both;
+            display: table;/* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 80px auto 20px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
             padding: 10px;
-            border: none;
-            background: #333;
+        }
+
+        .column label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .column input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Clearfix for columns */
+        .form-container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #e67e22;
             color: #fff;
+            border: none;
             cursor: pointer;
         }
 
-        .member {
-            display: flex;
-            align-items: center;
-            background: #fff; /* or any other color */
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
             padding: 20px;
-            margin: 5px;
-            width: calc(70% - 10px);
-            border-radius: 10px; /* optional */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* optional */
+            background: #222;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        
-        .member img {
-            width: 100px; /* fixed size */
-            height: 100px; /* fixed size */
-            object-fit: cover; /* ensures the image covers the area */
-            flex-shrink: 0; /* ensures the image does not shrink */
-            border-radius: 50%; /* circular image */
-            overflow: hidden; /* ensures the image stays within the circular boundary */
-            margin-right: 20px;
         }
-        
-        .member-info {
-            text-align: left;
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #e67e22;
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
-        
-        .member-info h3 {
-            margin-bottom: 10px;
+
+        button:hover {
+            opacity: 0.9;
         }
-        
-        .member-info p {
-            margin: 0;
-            color: #666; /* Lighter text color */
-            font-size: 0.9em; /* smaller font size */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        
-        
     </style>
 </head>
 <body>
-    <div class="contact-section">
-        <div class="contact-form">
-            <h2>CONTACT US</h2>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="E-mail">
-            <textarea placeholder="Message"></textarea>
-            <button>Send</button>
+    <main>
+        <div class="form-container">
+            <h1>ENTER INFORMATION</h1>
+            <form id="predictionForm">
+                <!-- Left Column -->
+                <div class="column">
+                    <label for="gender">Gender</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <!-- Additional form fields... -->
+                </div>
+                
+                <!-- Right Column -->
+                <div class="column">
+                    <label for="vehicleAge">Vehicle Age</label>
+                    <input type="radio" id="vehicleAge1" name="vehicleAge" value="1" checked>
+                    <label for="vehicleAge1">Less than 1 year</label>
+                    <input type="radio" id="vehicleAge2" name="vehicleAge" value="2">
+                    <label for="vehicleAge2">1 - 2 year</label>
+                    <input type="radio" id="vehicleAge3" name="vehicleAge" value="3">
+                    <label for="vehicleAge3">More than 2 years</label>
+
+                    <!-- Additional form fields... -->
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit">Predict</button>
+            </form>
         </div>
-        <div class="team-members">
-            <!-- Member 1 -->
-            <div class="member">
-                <img src="NCKH/images/1.jpg" alt="Vo Minh Thanh">
-                    <div class="member-info">
-                        <h3>Vo Minh Thanh</h3>
-                        <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
-                    </div>
-            </div>
-            <div class="member">
-                <img src="NCKH/images/1.jpg" alt="Vo Minh Thanh">
-                    <div class="member-info">
-                        <h3>Vo Minh Thanh</h3>
-                        <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
-                    </div>
-            </div>
-            <!-- Other members... -->
-        </div>
-    </div>
+    </main>
+
+    <footer>
+        Made by HKT Team.
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

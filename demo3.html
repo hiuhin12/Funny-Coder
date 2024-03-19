@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            .radio-group {
+                display: flex;
+                align-items: center;
+              }
+              
+              .radio {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-right: 10px;
+                cursor: pointer;
+                font-size: 16px;
+                user-select: none;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 4px;
+              }
+              
+              .radio input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+              
+              .radio-input {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                height: 20px;
+                width: 20px;
+                background-color: #eee;
+                border-radius: 50%;
+                border: 1px solid red;
+              }
+              
+              .radio input:checked ~ .radio-input {
+                background-color: #fff;
+              }
+              
+              .radio-input:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              .radio input:checked ~ .radio-input:after {
+                display: block;
+              }
+              
+              .radio-input:after {
+                top: 6px;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: red;
+              }
+              
+              /* Adding some hover effects */
+              .radio:hover input ~ .radio-input {
+                background-color: #f1f1f1;
+              }
+              
+              .radio:hover {
+                border-color: red;
+              }
+        </style>
+    </head>
+<body><div class="radio-group">
+    <label class="radio">
+      <input type="radio" name="gender" value="female" checked>
+      <span class="radio-input"></span>
+      Female
+    </label>
+    <label class="radio">
+      <input type="radio" name="gender" value="male">
+      <span class="radio-input"></span>
+      Male
+    </label>
+</div>
+</body>
+</html>

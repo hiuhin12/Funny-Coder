@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Learn Select Tag</title>
+        <script>
+            function changeBackground(value)
+            {
+                mydiv=document.getElementById("mydiv")
+                if(value!="none" && value!="block")
+                {
+                    mydiv.setAttribute("style", "background-color:"+value)
+                }
+                else
+                {
+                    mydiv.setAttribute("style", "display:"+value)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Choose Background Color</p>
+        <select onchange="changeBackground(this.value)">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="none">Hide Div</option>
+            <option value="block">Show Div</option>
+        </select>
+        <div id="mydiv" style="background-color: yellow">
+            Híu Hìn
+        </div>
+        <p>
+            Ngày <select name="ngay" id="ngay"></select>
+            Tháng <select name="thang" id="thang"></select>
+            Năm <select name="nam" id="nam"></select>
+        </p>
+    </body>
+</html>
+
+<!-- nhập ô chọn ngày tháng năm sinh trong box 
+kéo combobox, dùng for -->

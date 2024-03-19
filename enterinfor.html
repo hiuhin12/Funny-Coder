@@ -2,9 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Vehicle Insurance Prediction</title>
+        <title>Enter Information</title>
         <link rel="stylesheet" href="style.css">
         <style>
+            /* Header */
             body {
                 font-family: 'Michroma', Times, serif;
                 margin: 0px;
@@ -63,6 +64,130 @@
             .header .sub-menu li a {
                 color: black;
             }
+            
+            /* Enter information */
+            * {
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+    
+            body {
+                background: #f4f4f4;
+                color: #333;
+                line-height: 1.6;
+            }
+    
+            .enter-infor {
+                width: 1200px;
+                margin: 80px auto 20px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
+    
+            .column label {
+                /* display: block; */
+                margin: 10px 0 5px;
+            }
+    
+            .column input[type="radio"] {
+                margin-right: 5px;
+            }
+    
+            /* Clearfix for columns */
+            .enter-infor::after {
+                content: "";
+                clear: both;
+                display: table;/* Basic Reset */
+            
+    
+            .enter-infor {
+                max-width: 600px;
+                margin: 80px auto 20px;
+                padding: 30px;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .column {
+                float: left;
+                width: 50%;
+                padding: 10px;
+            }
+    
+            .column label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+    
+            .column input[type="radio"] {
+                margin-right: 5px;
+            }
+    
+            /* Clearfix for columns */
+            .enter-infor::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+    
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                background: #e67e22;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                opacity: 0.9;
+            }
+    
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: #222;
+                color: #fff;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            }
+    
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                background: #e67e22;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                opacity: 0.9;
+            }
+
+
         </style>
     </head>
     <body>
@@ -80,4 +205,78 @@
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
+
+        <!-- Main content -->
+        <main>
+            <div class="enter-infor">
+                <h1>ENTER INFORMATION</h1>
+                <form id="enter-form">
+                    <!-- Left Column -->
+                    <div class="column">
+                        <fieldset>
+                            <legend>Gender</legend>
+                            <input type="radio" id="female" name="gender" value="0">
+                            <label for="female">Female</label>
+                            <input type="radio" id="male" name="gender" value="1">
+                            <label for="male">Male</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Age</legend>
+                            <input type="number" id="age" name="age" value="age" placeholder="Customer's age">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Driving License</legend>
+                            <input type="radio" id="haveDL" name="license" value="1">
+                            <label for="haveDL">Have Driving License</label>
+                            <input type="radio" id="nothaveDL" name="license" value="0">
+                            <label for="nothaveDL">Don't have Driving License</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Region Code</legend>
+                            <input type="number" id="regioncode" name="regioncode" value="regioncode" placeholder="The unique code for customer's region from 0 to 52">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Previously Insured</legend>
+                            <input type="radio" id="haveVI" name="vehicle_insurance" value="1">
+                            <label for="haveVI">Have Vehicle Insurance</label>
+                            <input type="radio" id="nothaveVI" name="vehicle_insurance" value="0">
+                            <label for="nothaveVI">Don't have Vehicle Insurance</label>
+                        </fieldset>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="column">
+                        <fieldset>
+                            <legend>Vehicle Damage</legend>
+                            <input type="radio" id="damaged" name="vehicle_damage" value="0">
+                            <label for="damaged">Damaged in the past</label>
+                            <input type="radio" id="notdamage" name="vehicle_damage" value="1">
+                            <label for="notdamage">Not damage in the past</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Vehicle Age</legend>
+                            <input type="radio" id="1year" name="vehicle_age" value="0">
+                            <label for="1year">Less than 1 year</label>
+                            <input type="radio" id="12year" name="vehicle_age" value="1">
+                            <label for="12year">1 - 2 year</label>
+                            <input type="radio" id="2years" name="vehicle_age" value="2">
+                            <label for="2year">More than 2 years</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Annual Premium</legend>
+                            <input type="number" id="annual_premium" name="annual_premium" value="annual_premium" placeholder="How much does this customer pay as premium in the year?">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Policy Sales Channel</legend>
+                            <input type="number" id="policy_sales" name="policy_sales" value="policy_sales" placeholder="Anonymized Code for the channel of outreaching to customer from 1 to 163">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Vintage</legend>
+                            <input type="number" id="vintage" name="vintage" value="vintage" placeholder="How many days has this customer been associated with the company?">
+                        </fieldset>
+                    </div>
+                    <button type="submit">Predict</button>
+                </form>
+            </div>
+        </main>
     </body>

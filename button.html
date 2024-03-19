@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            .container {
+                width: 100%;
+              }
+              
+              .row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+              }
+              
+              .col-label {
+                flex: 1;
+              }
+              
+              .col-options {
+                flex: 2;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+              }
+              
+              /* Đảm bảo rằng các radio buttons và nhãn liên quan của chúng được đặt gần nhau */
+              input[type="radio"] {
+                margin-right: 5px;
+              }
+              
+              label {
+                margin-right: 10px;
+              }
+              
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+              <div class="col-label">
+                <label>Gender</label>
+              </div>
+              <div class="col-options">
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+              </div>
+            </div>
+            <!-- Tiếp tục với các hàng khác cho thông tin về "Vehicle Age", vv. -->
+          </div>
+    </body>
+</html>
