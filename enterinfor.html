@@ -23,9 +23,9 @@
                 align-items: center;
             }
     
-            .logo {
-                font-size: 20px;
-                font-weight: bold;
+            .logo img {
+                width: 45%;
+                margin-top: 3px;
             }
 
             .predict {
@@ -72,9 +72,9 @@
             }
     
             body {
-                background: #f4f4f4;
+                background: #F1EBE6;
                 color: #333;
-                line-height: 1.6;
+                line-height: 1.7;
             }
     
             .enter-infor {
@@ -83,10 +83,15 @@
                 margin: 80px auto 20px;
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                justify-content: center;
             }
 
             input, label, legend {
                 font-family: 'Open Sans';
+            }
+
+            legend {
+                font-weight: 500;
             }
     
             input[type="number"] {
@@ -114,7 +119,7 @@
                 border: none;
                 cursor: pointer;
             }
-    
+            
             button:hover {
                 opacity: 0.9;
             }
@@ -124,7 +129,7 @@
     <body>
         <!-- Header menu -->
         <ul class="header">
-            <div class="logo">HCT TEAM</div>
+            <div class="logo"><img src="NCKH/images/logo.png"></div>
             <li><a href="home.html">HOME</a></li>
         <li class="predict">
                 <a href="predict.html">PREDICT</a>
@@ -206,8 +211,9 @@
                             <input type="number" id="vintage" name="vintage" value="vintage" placeholder="How many days has this customer been associated with the company?">
                         </fieldset>
                     </div>
-                    <button type="submit">Predict</button>
+                    
                 </form>
+                <button type="submit">Predict</button>
             </div>
         </main>
     </body>

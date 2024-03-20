@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Insurance Cross Cell Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+        <div class="container">
+            <h2 class='container-heading'><span class="heading_font">Health Insurance Cross Sell Prediction</span></h2>
+        </div>
+    
+        <!-- Result -->
+        <div class="results">
+            {% if prediction == 1 %}
+                <h1>Prediction: <span class='yes'>You are interested in Vehicle Insurance</span></h1>
+    
+            {% elif prediction == 0 %}
+                <h1>Prediction: <span class='no'>You aren't interested in Vehicle Insurance</span></h1>
+    
+            {% endif %}
+        </div>
+    
+        <div class="container">
+            <h1>Kết Quả Phân Loại Khách Hàng</h1>
+            <!-- Hiển thị kết quả phân loại từ server -->
+            <p>Khách hàng của bạn thuộc nhóm: <strong>{{ segmentation }}</strong></p>
+        </div>
+    
+    </body>
+    
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance Cross-Sell Prediction</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Website Title -->
+  
+    <div class="container">
+      <h2 class='container-heading'><span class="heading_font">Health Insurance Cross-Sell Prediction</span></h2>
+    </div>
+
+    <div class="enter">
+      <form action="/enter-information" method="POST">
+        <input type="submit" class="enter" value="Enter Information">
+      </form>
+    </div>
+
+    <div class="upload">
+      <form action="/upload-data" method="POST">
+        <input type="submit" class="upload" value="Upload Data">
+      </form>
+    </div>
+
+    <!-- Footer -->
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://www.facebook.com/hyhtttruc"><i
+          class="fab fa-facebook fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by HKT Team.</p>
+  </div>
+
+</body>
+
+</html>

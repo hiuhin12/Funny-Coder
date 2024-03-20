@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance Cross-Sell Prediction</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Website Title -->
+  
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Health Insurance Cross Cell Prediction</span></h2>
+    </div>
+
+    <!-- Text Area -->
+    <div class="ml-container">
+      <form method="POST" action="/enter-information/result">
+        
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter ID"><br>
+
+        <label for="Gender">Gender</label>
+        <select id="Gender" name="Gender">
+          <option selected>---select option---</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select><br>
+
+        <label for="Age">Age</label>
+        <input type="text" id="Age" name="Age" placeholder="Enter age"><br>
+
+        <label for="Driving_License">Driving License</label>
+        <select id="Driving_License" name="Driving_License">
+          <option selected>---select option---</option>
+          <option value="1">I have Driving License</option>
+          <option value="0">I don't have Driving License</option>
+        </select><br>
+
+        <label for="Region_Code">Region Code</label>
+        <input type="text" id="Region_Code" name="Region_Code" placeholder="Enter ID"><br>
+
+        <label for="Previously_Insured">Previously Insured</label>
+        <select id="Previously_Insured" name="Previously_Insured">
+          <option selected>---select option---</option>
+          <option value="1">I have Vehicle Insurance</option>
+          <option value="0">I don't have Vehicle Insurance</option>
+        </select><br>
+
+      
+
+        <label for="Vehicle_Age">Vehicle Age</label>
+        <input type="text" id="Vehicle_Age" name="Vehicle_Age" placeholder="Enter ID"><br>
+
+        <label for="Vehicle_Damage">Vehicle Damage</label>
+        <select id="Vehicle_Damage" name="Vehicle_Damage">
+          <option selected>---select option---</option>
+          <option value="1">My vehicle damaged in the past</option>
+          <option value="2">My vehicle didn't damage in the past</option>
+        </select><br>
+
+        <label for="Annual_Premium">Annual Premium</label>
+        <input type="text" id="Annual_Premium" name="Annual_Premium" placeholder="How much do you pay as premium in the year?"><br>
+             
+
+        <label for="Policy_Sales_Channel">Channel</label>
+        <input type="text" id="Policy_Sales_Channel" name="Policy_Sales_Channel" placeholder="Enter ID"><br>
+
+        <label for="Vintage">Vintage</label>
+        <input type="text" id="Vintage" name="Vintage" placeholder="How many days have you been associated with the company?"><br>   
+
+        <input type="submit" class="my-cta-button" value="Results">
+
+      </form>
+    </div>
+
+    <!-- Footer -->
+  <div class='footer'>
+    <div class="contact">
+      <a target="_blank" href="https://www.facebook.com/hyhtttruc"><i
+          class="fab fa-facebook fa-lg contact-icon"></i></a>
+    </div>
+    <p class='footer-description'>Made by HKT Team.</p>
+  </div>
+
+</body>
+
+</html>
