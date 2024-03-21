@@ -84,7 +84,12 @@
 
         <!-- Upload Content -->
         <form action="/upload-data/upload" method="POST" enctype="multipart/form-data">
-            <input type="file" class="upload" name="file" accept=".csv, .txt, .xlsx, .json">
-            <input type="submit" class="enter" value=" Tải lên">
-          </form>
+            <input type="file" class="upload" name="file" accept=".csv, .txt, .xlsx, .json" style="display:none;">
+            <input type="submit" class="enter" value="Tải lên">
+            <div class="file-upload">
+                <button type="button" id="uploadBtn">Choose File</button>
+                <input type="file" id="fileInput" class="upload" name="file" accept=".csv, .txt, .xlsx, .json" style="display: none;">
+                <input type="submit" class="enter" value="Tải lên">
+              </div>
+        </form>
     </body>

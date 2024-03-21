@@ -1,80 +1,114 @@
 <html>
-    <head>
-        <style>
-            footer {
-                background-color: #333;
-                color: #fff;
-                padding: 50px 0;
-              }
-              
-              .widget {
-                margin-bottom: 20px;
-              }
-              
-              .widget h3 {
-                font-size: 18px;
-                margin-bottom: 10px;
-              }
-              
-              .widget ul {
-                list-style: none;
-                padding: 0;
-              }
-              
-              .widget ul li {
-                margin-bottom: 10px;
-              }
-              
-              .widget ul li a {
-                color: #fff;
-                text-decoration: none;
-              }
-              
-              .widget ul li a:hover {
-                text-decoration: underline;
-              }
-              
-              @media (max-width: 768px) {
-                .widget {
-                  margin-bottom: 10px;
-                }
-              }
-              
-        </style>
-    </head>
-    <body>
-        <footer>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="widget">
-                    <h3>SHINE-AURA</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis quam ut purus aliquam, ac tincidunt massa ultricies.</p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="widget">
-                    <h3>Site Map</h3>
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Products</a></li>
-                      <li><a href="#">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="widget">
-                    <h3>Contact Us</h3>
-                    <ul>
-                      <li><a href="#">thisisouremall@email.com</a></li>
-                      <li><a href="#">Street Address #000, City, State, Zip</a></li>
-                    </ul>
-                  </div>
-                </div>
+  <head>
+    <title>Footer</title>
+    <style>
+      footer {
+        background-color: #333; /* Dark background */
+        color: #fff; /* White text */
+        font-family: 'Open Sans', sans-serif; /* Your desired font */
+        padding: 20px 0; /* Some padding */
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between; /* Space out the footer sections */
+        align-items: flex-start; /* Align the items to the top */
+        max-width: 1200px; /* Maximum width of the footer */
+        margin: 0 auto; /* Center the footer container */
+        padding: 0 20px; /* Padding on the sides */
+    }
+    
+    .footer-section {
+        margin: 0 20px; /* Margin between sections */
+    }
+    
+    .footer-logo {
+        width: 100px; /* Logo width */
+        margin-bottom: 10px; /* Space below the logo */
+    }
+    
+    .social-icons a {
+        color: #fff; /* White icons */
+        margin-right: 10px; /* Space between icons */
+        /* Additional styles for the icons can be added here */
+    }
+    
+    .social-icons a i {
+        /* Style your icons here */ 
+    }
+    
+    .footer-section h4 {
+        margin-top: 0; /* No margin at the top of the heading */
+    }
+    
+    .footer-section ul {
+        list-style: none; /* Remove bullets from the list */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+    
+    .footer-section ul li a {
+        color: #fff; /* Links are white */
+        text-decoration: none; /* No underline */
+        margin-bottom: 5px; /* Space between links */
+        display: block; /* Each link takes up its own line */
+    }
+    
+    .footer-section address {
+        font-style: normal; /* Normally address tag is italic */
+        margin-top: 10px; /* Space above address */
+    }
+    
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column; /* Stack the sections on top of each other */
+            align-items: center; /* Center align the stacked sections */
+        }
+    
+        .footer-section {
+            margin-bottom: 20px; /* Space between stacked sections */
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <img src="path_to_logo" alt="HKT Team Logo" class="footer-logo">
+              <p>HKT Team</p>
+              <p>Student Scientific Research Group from the Faculty of Information Systems, University of Economics and Law.</p>
+              <div class="social-icons">
+                  <!-- Icons are placeholders and should be replaced with actual social media icons -->
+                  <a href="facebook_link"><i class="fa fa-facebook"></i></a>
+                  <a href="linkedin_link"><i class="fa fa-linkedin"></i></a>
+                  <a href="instagram_link"><i class="fa fa-instagram"></i></a>
               </div>
-            </div>
-          </footer>
-          
-    </body>
+          </div>
+          <div class="footer-section">
+              <h4>Site Map</h4>
+              <ul>
+                  <li><a href="home_link">Home</a></li>
+                  <li><a href="predict_link">Predict</a></li>
+                  <li><a href="upload_data_link">Upload Data</a></li>
+                  <li><a href="blog_link">Blog</a></li>
+                  <li><a href="contact_us_link">Contact us</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Predict</h4>
+              <ul>
+                  <li><a href="enter_information_link">Enter Information</a></li>
+                  <li><a href="upload_data_link">Upload Data</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Contact</h4>
+              <p><a href="tel:+84817422199">+84 817 422 199</a></p>
+              <p><a href="mailto:thanhnvm21416c@st.uel.edu.vn">thanhnvm21416c@st.uel.edu.vn</a></p>
+              <address>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</address>
+          </div>
+      </div>
+    </footer>
+  </body>
 </html>

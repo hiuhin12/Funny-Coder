@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Upload Data</title>
+        <style>
+            .upload-area {
+                /* Style your upload area */
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .drag-drop-container {
+                border: 2px dashed #90EE90;
+                text-align: center;
+                padding: 20px;
+                margin: 10px;
+                background-color: #f9f9f9;
+            }
+            
+            .uploaded-files-list {
+                margin-top: 20px;
+            }
+            
+            .file-entry {
+                background-color: #e0e0e0;
+                margin-bottom: 10px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            
+            .file-name {
+                /* Styles for file name */
+            }
+            
+            .file-status {
+                /* Styles for file status, e.g., progress, completed status */
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="upload-area">
+            <!-- Existing form for file upload -->
+            <form action="/upload-data/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+                <input type="file" class="upload" name="file" accept=".csv, .txt, .xlsx, .json">
+                <input type="submit" class="enter" value="Tải lên">
+            </form>
+        
+            <!-- Container for drag and drop (visual element only, functionality comes with JS) -->
+            <div class="drag-drop-container">
+                <p>Drag and drop files here -OR-</p>
+                <button onclick="document.querySelector('.upload').click()">Browse Files</button>
+            </div>
+        </div>
+        
+        <!-- Container for displaying uploaded files -->
+        <div class="uploaded-files-list">
+            <h3>Uploaded Files</h3>
+            <div id="uploaded-files">
+                <!-- Example of uploaded file entries -->
+                <div class="file-entry">
+                    <span class="file-name"></span>
+                    <span class="file-status"></span>
+                </div>
+                <!-- More uploaded file entries -->
+            </div>
+        </div>
+        <script>
+            // Add event listeners for the file input
+            document.querySelector('.upload').addEventListener('change', function(event) {
+                var files = event.target.files;
+                for (var i = 0; i < files.length; i++) {
+                    // Create an entry for each file
+                    var fileEntry = document.createElement('div');
+                    fileEntry.className = 'file-entry';
+                    fileEntry.innerHTML = '<span class="file-name">' + files[i].name + '</span>' +
+                                        '<span class="file-status">Uploading...</span>';
+
+                    // Append the entry to the uploaded files list
+                    document.getElementById('uploaded-files').appendChild(fileEntry);
+
+                    // Here you would typically upload the file and update the status
+                }
+            });
+        </script>
+    </body>
+</html>
