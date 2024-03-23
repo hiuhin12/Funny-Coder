@@ -4,8 +4,8 @@
         <meta charset="utf-8"/>
         <title>Vehicle Insurance Prediction</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
-
             /* Thanh header */
             body {
                 font-family: 'Michroma', Times, serif;
@@ -66,7 +66,7 @@
                 color: black;
             }
 
-            /* Content chính */
+            /* Home */
             .main-content {
                 background-image: url(NCKH/images/main-bg.png);
                 background-size: cover;
@@ -107,12 +107,6 @@
                 color: #2E2E2E;
             }
 
-            /* Foooter */
-            .footer {
-                font-family: 'Open Sans';
-                text-align: center;
-                font-size: 15px;
-            }
 
             /* Used for */
             .used-for {
@@ -338,54 +332,130 @@
                 margin-bottom: 20px;
             }
             
+            /* Footer */
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+            footer {
+                background-color: #585858;
+                color: #fff; 
+                font-family: 'Open Sans', sans-serif;
+                padding: 20px 0; 
+                font-size: 13px;
+            }
+            
+            .footer-container {
+                display: flex;
+                justify-content: space-between; /* Space out the footer sections */
+                align-items: flex-start; /* Align the items to the top */
+                max-width: 1200px; /* Maximum width of the footer */
+                margin: 0 auto; /* Center the footer container */
+                padding: 0 20px; /* Padding on the sides */
+            }
+            
+            .footer-section {
+                margin: 0 20px; 
+            }
+            
+            .footer-logo {
+                width: 250px; 
+                margin-bottom: 10px;
+            }
+            
+            .team-HKT {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                
+            }
+            .social-icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 200px;
+            }
+            
+            .social-icon {
+                color: #fff; 
+                margin-right: 20px; 
+                text-decoration: none; 
+                font-size: 17px; 
+            }
+        
+            .social-icons a i {
+                color:#fff;
+            }
+            
+            .footer-section h4 {
+                margin-top: 0; 
+            }
+            
+            .footer-section ul {
+                list-style: none;
+                padding: 0; 
+                margin: 0; 
+            }
+            
+            .footer-section ul li a {
+                color: #fff; 
+                margin-bottom: 5px; 
+                display: block; 
+            }
+            
+            .footer-section address {
+                font-style: normal; 
+                margin-top: 10px; 
+            }
         </style>
     </head>
     <body>
         <!-- Header menu -->
         <ul class="header">
             <div class="logo"><img src="NCKH/images/logo.png"></div>
-            <li><a href="home.html">HOME</a></li>
+            <li><a href="#home">HOME</a></li>
         <li class="predict">
-                <a href="predict.html">PREDICT</a>
+                <a href="#predict">PREDICT</a>
                 <ul class="sub-menu">
                     <li><a href="enterinfor.html">Enter Information</a></li>
                     <li><a href="upload.html">Upload Data</a></li>
                 </ul>
             </li>   
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
         </ul>
 
         <!-- Main content -->
         <div class="main-content">
-            <h1>VEHICLE INSURANCE <br/>PREDICTION</h1>
+            <h1 id="home">VEHICLE INSURANCE <br/>PREDICTION</h1>
             <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms predict your customer's insurance needs, <br/>offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
-            <input class="main-button" type="button" value="Predict Now!" onclick="">
-            <div class="footer">
-                Made by HKT Team.
-            </div>
+            <a href="#predict"><input class="main-button" type="button" value="Predict Now!" onclick=""></a>
+                <div style="font-family: 'Open Sans';
+                            text-align: center;
+                            font-size: 15px;">Made by HKT Team.</div>
+
         </div>
 
         <!-- Used for -->
         <div class="used-for">
-            <h2>What's this website used for?</h2>
+            <h2 id="predict">What's this website used for?</h2>
                 <div class="box">
                     <div class="box1">
                         <h3>For Salesman</h3>
                         <p>Click to enter customer information and instantly see their interests or segmentation. Our analytics simplify profiling, boosting engagement strategies.</p>
-                        <button>Enter Information</button>
+                        <button><a href="enterinfor.html">Enter Information</a></button>
                     </div>
                     <div class="box1">
                         <h3>For Company</h3>
                         <p>Just upload customer data to instantly view their interests and segmentation. Our analytics enhance profiling and strategy, offering a broader view of your customers.</p>
-                        <button>Upload Data</button>
+                        <button><a href="upload.html">Upload Data</a></button>
                     </div>
                 </div>
         </div>
 
         <!-- Blog -->
         <div class="blog-image">
-            <h1>BLOG</h1>
+            <h1 id="blog">BLOG</h1>
         </div>
         <div class="blog-container">
             <div class="container">
@@ -412,7 +482,7 @@
         <hr> 
         <div class="contact-container">
             <div class="contact-form">
-                <h2>CONTACT US</h2>
+                <h2 id="contact">CONTACT US</h2>
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="E-mail" required>
                 <textarea placeholder="Message" required></textarea>
@@ -462,6 +532,53 @@
                 </div>
             </div>
         </div>
-        <hr>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                      <img src="NCKH/images/logo white.png" alt="HKT Team Logo" class="footer-logo">
+                      <div class="team-HKT">
+                          <img src="NCKH/images/HKT.jpg" style="width:150px;">
+                          <div class="team-text">
+                          <p>Student Scientific Research Group <br/> from the Faculty of Information Systems, University of Economics and Law.</p>
+                          <div class="social-icons">
+                              <!-- Icons are placeholders and should be replaced with actual social media icons -->
+                              <a href="https://www.facebook.com/129.hiuhin" target="_blank" class="social-icon">
+                                  <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href="https://www.linkedin.com/in/hiuhin/" target="_blank" class="social-icon">
+                                  <i class="fab fa-linkedin-in"></i>
+                              </a>
+                              <a href="https://www.instagram.com/hiu._.hinnn/" target="_blank" class="social-icon">
+                                  <i class="fab fa-instagram"></i>
+                              </a>
+                          </div>
+                          </div>
+                      </div>
+                </div>
+                <div class="footer-section" style="width:100px;">
+                    <h4>Site Map</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#predict">Predict</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Predict</h4>
+                    <ul>
+                        <li><a href="enter_information_link">Enter Information</a></li>
+                        <li><a href="upload_data_link">Upload Data</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:+84817422199">+84 817 422 199</a></p>
+                    <p><a href="mailto:thanhvm21416c@st.uel.edu.vn">thanhvm21416c@st.uel.edu.vn</a></p>
+                    <address>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</address>
+                </div>
+            </div>
+          </footer>
     </body>
 </html>

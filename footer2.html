@@ -1,12 +1,19 @@
 <html>
   <head>
     <title>Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
-      footer {
-        background-color: #333; /* Dark background */
-        color: #fff; /* White text */
-        font-family: 'Open Sans', sans-serif; /* Your desired font */
-        padding: 20px 0; /* Some padding */
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    footer {
+        background-color: #585858;
+        color: #fff; 
+        font-family: 'Open Sans', sans-serif;
+        padding: 20px 0; 
+        font-size: 13px;
     }
     
     .footer-container {
@@ -19,55 +26,57 @@
     }
     
     .footer-section {
-        margin: 0 20px; /* Margin between sections */
+        margin: 0 20px; 
     }
     
     .footer-logo {
-        width: 100px; /* Logo width */
-        margin-bottom: 10px; /* Space below the logo */
+        width: 250px; 
+        margin-bottom: 10px;
     }
     
-    .social-icons a {
-        color: #fff; /* White icons */
-        margin-right: 10px; /* Space between icons */
-        /* Additional styles for the icons can be added here */
+    .team-HKT {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+    }
+    .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 200px;
     }
     
+    .social-icon {
+        color: #fff; 
+        margin-right: 20px; 
+        text-decoration: none; 
+        font-size: 17px; 
+    }
+
     .social-icons a i {
-        /* Style your icons here */ 
+        color:#fff;
     }
     
     .footer-section h4 {
-        margin-top: 0; /* No margin at the top of the heading */
+        margin-top: 0; 
     }
     
     .footer-section ul {
-        list-style: none; /* Remove bullets from the list */
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
+        list-style: none;
+        padding: 0; 
+        margin: 0; 
     }
     
     .footer-section ul li a {
-        color: #fff; /* Links are white */
-        text-decoration: none; /* No underline */
-        margin-bottom: 5px; /* Space between links */
-        display: block; /* Each link takes up its own line */
+        color: #fff; 
+        margin-bottom: 5px; 
+        display: block; 
     }
     
     .footer-section address {
-        font-style: normal; /* Normally address tag is italic */
-        margin-top: 10px; /* Space above address */
-    }
-    
-    @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column; /* Stack the sections on top of each other */
-            align-items: center; /* Center align the stacked sections */
-        }
-    
-        .footer-section {
-            margin-bottom: 20px; /* Space between stacked sections */
-        }
+        font-style: normal; 
+        margin-top: 10px; 
     }
     </style>
   </head>
@@ -75,17 +84,27 @@
     <footer>
       <div class="footer-container">
           <div class="footer-section">
-              <img src="path_to_logo" alt="HKT Team Logo" class="footer-logo">
-              <p>HKT Team</p>
-              <p>Student Scientific Research Group from the Faculty of Information Systems, University of Economics and Law.</p>
-              <div class="social-icons">
-                  <!-- Icons are placeholders and should be replaced with actual social media icons -->
-                  <a href="facebook_link"><i class="fa fa-facebook"></i></a>
-                  <a href="linkedin_link"><i class="fa fa-linkedin"></i></a>
-                  <a href="instagram_link"><i class="fa fa-instagram"></i></a>
-              </div>
+                <img src="NCKH/images/logo white.png" alt="HKT Team Logo" class="footer-logo">
+                <div class="team-HKT">
+                    <img src="NCKH/images/HKT.jpg" style="width:150px;">
+                    <div class="team-text">
+                    <p style="text-align:justify">Student Scientific Research Group <br/> from the Faculty of Information Systems, University of Economics and Law.</p>
+                    <div class="social-icons">
+                        <!-- Icons are placeholders and should be replaced with actual social media icons -->
+                        <a href="https://www.facebook.com/129.hiuhin" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hiuhin/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hiu._.hinnn/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
           </div>
-          <div class="footer-section">
+          <div class="footer-section" style="width:100px;">
               <h4>Site Map</h4>
               <ul>
                   <li><a href="home_link">Home</a></li>
@@ -105,7 +124,7 @@
           <div class="footer-section">
               <h4>Contact</h4>
               <p><a href="tel:+84817422199">+84 817 422 199</a></p>
-              <p><a href="mailto:thanhnvm21416c@st.uel.edu.vn">thanhnvm21416c@st.uel.edu.vn</a></p>
+              <p><a href="mailto:thanhvm21416c@st.uel.edu.vn">thanhvm21416c@st.uel.edu.vn</a></p>
               <address>No 669, Highway 1, Quarter 3, Linh Xuan Ward, Thu Duc City, Ho Chi Minh City, Vietnam</address>
           </div>
       </div>
