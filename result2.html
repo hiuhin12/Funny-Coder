@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Open Sans';
+            margin: 0;
+            padding: 0;
+            background-color: #F1EBE6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .results-container {
+            text-align: center;
+        }
+
+        .results-container h1 {
+            font-family: 'Michroma';
+            font-size: 40px;
+        }
+        
+        .results-card {
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            width: 1000px;
+            height: 200px;
+            font-size: 18px;
+        }
+        
+        .highlight {
+            color: #dd5c24; 
+            font-weight: bold;
+        }
+        
+        .button-container button {
+            background-color: #dd5c24;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Open Sans';
+        }
+        
+        .button-container button:hover {
+            background-color: #bb4d1a; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <h1>PREDICTED RESULTS</h1>
+        <div class="results-card">
+            <p><strong>Prediction: </strong>Customer <span class="highlight">is interested</span> in Vehicle Insurance</p>
+            <p><strong>Customer Segmentation:</strong> This customer belongs to the <span class="highlight">Common</span> group</p>
+        </div>
+        <div class="button-container">
+            <button onclick="location.href='home.html'">Back to Home</button>
+            <button onclick="location.href='enterinfor.html'">Continue Predicting</button>
+        </div>
+    </div>
+</body>
+</html>

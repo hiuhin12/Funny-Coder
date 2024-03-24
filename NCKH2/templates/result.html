@@ -20,18 +20,18 @@
         <!-- Result -->
         <div class="results">
             {% if prediction == 1 %}
-                <h1>Prediction: <span class='yes'>You are interested in Vehicle Insurance</span></h1>
+                <h1>Prediction: <span class='yes'>Customer is interested in Vehicle Insurance.</span></h1>
     
             {% elif prediction == 0 %}
-                <h1>Prediction: <span class='no'>You aren't interested in Vehicle Insurance</span></h1>
+                <h1>Prediction: <span class='no'>Customer is not interested in Vehicle Insurance.</span></h1>
     
             {% endif %}
         </div>
     
         <div class="container">
-            <h1>Kết Quả Phân Loại Khách Hàng</h1>
+            <h1>Customer Classification Results</h1>
             <!-- Hiển thị kết quả phân loại từ server -->
-            <p>Khách hàng của bạn thuộc nhóm: <strong>{{ segmentation }}</strong></p>
+            <p>This customer belongs to the group: <strong>{{ segmentation }}</strong></p>
         </div>
     
     </body>
