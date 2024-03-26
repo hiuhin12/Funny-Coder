@@ -65,7 +65,7 @@ def predict():
 def uploaddata():
     return render_template('upload.html')
 
-@app.route('/upload-data/uploads', methods=['POST'])
+@app.route('/upload-data/upload', methods=['POST'])
 def upload():
     if 'file' not in request.files:
         return redirect(request.url)
