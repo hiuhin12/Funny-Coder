@@ -60,7 +60,7 @@ body {
 
 /* Home */
 .main-content {
-    background-image: url(NCKH/images/main-bg.png);
+    background-image: url(NCKH_final/images/main-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -173,7 +173,7 @@ button:hover {
 
 /* Blog */
 .blog-image {
-    background-image: url('NCKH/images/blog.png'); 
+    background-image: url('NCKH_final/images/blog.png'); 
     background-size: cover; 
     background-position: center; 
     text-align: center; 
@@ -241,7 +241,7 @@ hr {
     flex-wrap: wrap; 
 }
 .contact-form {
-    background-image: url('NCKH/images/contact.png');
+    background-image: url('NCKH_final/images/contact.png');
     background-size: cover;
     background-position: center;
     width: 100%;
