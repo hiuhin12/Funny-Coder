@@ -10,7 +10,9 @@
     <body>
         <!-- Header menu -->
         <ul class="header">
-            <div class="logo"><img src="NCKH_final/images/logo.png"></div>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}">
+            </div>
             <li><a href="#home">HOME</a></li>
         <li class="predict">
                 <a href="#predict">PREDICT</a>
@@ -60,19 +62,19 @@
         </div>
         <div class="blog-container">
             <div class="container">
-                <img src="NCKH_final/images/1.jpg" alt="Car Insurance">
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Car Insurance">
                 <h3>Compare Car Insurance Quotes (Rates in 2024)</h3>
                 <p>Offer advice on how to compare insurance rates, explain the factors that affect insurance premiums, and possibly provide tips on saving money on car insurance. Discuss the importance of understanding coverage options and how to choose a policy that best fits the individual's needs and budget.</p>
                 <button><a href="https://www.forbes.com/advisor/car-insurance/car-insurance-quotes/" target="_blank">Details</a></button>
             </div>
             <div class="container">
-                <img src="NCKH_final/images/2.jpg" alt="Tesla Insurance">
+                <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Tesla Insurance">
                 <h3>Tesla Insurance hits nearly half a million in premiums</h3>
                 <p>Tesla Insurance achieved nearly half a billion dollars in written premiums in 2023, an impressive feat highlighting a 115% year-on-year growth. Despite this financial success, the venture continues to face financial challenges, with some states showing a combined ratio of 145%.</p>
                 <button><a href="https://www.insurancebusinessmag.com/us/news/auto-motor/tesla-insurance-hits-nearly-half-a-billion-in-premiums-479768.aspx" target="_blank">Details</a></button>
             </div>
             <div class="container">
-                <img src="NCKH_final/images/3.jpg" alt="Car Insurance Types">
+                <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="Car Insurance Types">
                 <h3>Types of Car Insurance: Compare 6 Coverage Options</h3>
                 <p>Car insurance policies can offer various types of coverage, such as liability for damages or injuries you cause, collision for damage to your own vehicle, comprehensive for non-collision damage, and personal injury protection or medical payments for injuries. Each provides financial safety nets.</p>
                 <button><a href="https://www.marketwatch.com/guides/insurance-services/types-of-car-insurance/" target="_blank">Details</a></button>
@@ -97,35 +99,35 @@
             </div>
             <div class="team-members">
                 <div class="member">
-                    <img src="NCKH_final/images/MT.png" alt="Minh Thanh">
+                    <img src="{{ url_for('static', filename='images/MT.png') }}" alt="Minh Thanh">
                         <div class="member-info">
                             <h4>Vo Minh Thanh</h4>
                             <p>K21416C<br>thanhvm21416c@st.uel.edu.vn<br>(+84) 817 422 199</p>
                         </div>
                 </div>
                 <div class="member">
-                    <img src="NCKH_final/images/AK.jpeg" alt="Anh Khoa">
+                    <img src="{{ url_for('static', filename='images/AK.jpeg') }}" alt="Anh Khoa">
                         <div class="member-info">
                             <h4>Tran Anh Khoa</h4>
                             <p>K21411C<br>khoata21411c@st.uel.edu.vn<br>+(84) 941 705 717</p>
                         </div>
                 </div>
                 <div class="member">
-                    <img src="NCKH_final/images/HH.jpg" alt="Hieu Hien">
+                    <img src="{{ url_for('static', filename='images/HH.jpg') }}" alt="Hieu Hien">
                         <div class="member-info">
                             <h4>Nguyen Trung Hieu Hien</h4>
                             <p>K21411CA<br>hiennth21411ca@st.uel.edu.vn<br>+(84) 918 702 938</p>
                         </div>
                 </div>
                 <div class="member">
-                    <img src="NCKH_final/images/QH.jpg" alt="Quoc Huy">
+                    <img src="{{ url_for('static', filename='images/QH.jpg') }}" alt="Quoc Huy">
                         <div class="member-info">
                             <h4>Nguyen Quoc Huy</h4>
                             <p>K22406C<br>huynq22406c@st.uel.edu.vn<br>+(84) 375 001 528</p>
                         </div>
                 </div>
                 <div class="member">
-                    <img src="NCKH_final/images/TT.jpg" alt="Thanh Truc">
+                    <img src="{{ url_for('static', filename='images/TT.jpg') }}" alt="Thanh Truc">
                         <div class="member-info">
                             <h4>Huynh Thi Thanh Truc</h4>
                             <p>K22411<br>truchtt22411@st.uel.edu.vn<br>+(84) 356 770 565</p>
@@ -137,9 +139,9 @@
         <footer>
             <div class="footer-container">
                 <div class="footer-section">
-                      <img src="NCKH_final/images/logo white.png" alt="HKT Team Logo" class="footer-logo">
+                      <img src="{{ url_for('static', filename='images/logo white.png') }}" alt="HKT Team Logo" class="footer-logo">
                       <div class="team-HKT">
-                          <img src="NCKH_final/images/HKT.jpg" style="width:150px;">
+                          <img src="{{ url_for('static', filename='images/HKT.jpg') }}" style="width:150px;">
                           <div class="team-text">
                           <p>Student Scientific Research Group <br/> from the Faculty of Information Systems, University of Economics and Law.</p>
                           <div class="social-icons">
