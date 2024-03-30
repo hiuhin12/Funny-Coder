@@ -1,1 +1,10 @@
 /* UPLOAD RESULT */
+/* Table */
+.bordered-table {
+    border-collapse: collapse;
+}
+
+.bordered-table th, .bordered-table td {
+    border: 1px solid black;
+    padding: 8px;
+}

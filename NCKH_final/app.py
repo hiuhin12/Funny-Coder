@@ -15,12 +15,21 @@ model = {
     'catboost_classifier': pickle.load(open(r'C:\Users\Admin\OneDrive - uel.edu.vn\Documents\GitHub\Funny-Coder\NCKH_final\trained_catboost_classifier.pkl', 'rb'))
 }
 
+@app.route('/amain')
+def amain():
+    return render_template('amain.html')
+
 @app.route('/')
 def home():
     return render_template('amain.html')
 
-@app.route('/enter-information', methods=['POST'])
+@app.route('/enter-information', methods=['POST', 'GET'])
 def enterinformation():
+    if request.method == 'POST':
+        # Logic để xử lý dữ liệu form gửi lên
+        # Ví dụ: Lấy dữ liệu từ form, tiến hành dự đoán, v.v...
+        return redirect(url_for('enterinformation'))
+    # Nếu là GET, chỉ cần hiển thị trang/form
     return render_template('enterinfor.html')
 
 @app.route('/enter-information/result', methods=['POST'])
@@ -61,8 +70,13 @@ def predict():
         return render_template('enterinfor-result.html', prediction=prediction_result[0], segmentation=segmentation_result[0])
     return redirect(url_for('home'))
 
-@app.route('/upload-data', methods=['POST'])
+@app.route('/upload-data', methods=['POST', 'GET'])
 def uploaddata():
+    if request.method == 'POST':
+        # Logic để xử lý dữ liệu form gửi lên
+        # Ví dụ: Lấy dữ liệu từ form, tiến hành dự đoán, v.v...
+        return redirect(url_for('uploaddata'))
+    # Nếu là GET, chỉ cần hiển thị trang/form
     return render_template('upload.html')
 
 @app.route('/upload-data/upload', methods=['POST'])
@@ -74,7 +88,7 @@ def upload():
         return redirect(request.url)
     if file:
         # Lưu file vào thư mục mong muốn
-        filepath = os.path.join('uploads', file.filename)
+        filepath = os.path.join(r'C:\Users\Admin\OneDrive - uel.edu.vn\Documents\GitHub\Funny-Coder\NCKH_final\uploads', file.filename)
         file.save(filepath)
 
         # Đọc dữ liệu từ file vừa được upload
@@ -95,7 +109,7 @@ def upload():
 
         data_records = dataset.to_dict(orient='records')
 
-        return render_template('uploadkq.html', records=data_records)
+        return render_template('upload-result.html', records=data_records)
     return redirect(url_for('home'))
     
 if __name__ == '__main__':

@@ -19,8 +19,8 @@
             <p><strong>Customer Segmentation:</strong> This customer belongs to the <span class="highlight">{{ segmentation }}</span> group</p>
         </div>
         <div class="button-container">
-            <button onclick="location.href='home.html'">Back to Home</button>
-            <button onclick="location.href='enterinfor.html'">Continue Predicting</button>
+            <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+            <a href="{{ url_for('enterinformation') }}"><button>Continue Predicting</button></a>
         </div>
     </div>
 </body>

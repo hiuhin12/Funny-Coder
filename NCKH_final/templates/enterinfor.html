@@ -11,12 +11,12 @@
             <div class="logo">
                 <img src="{{ url_for('static', filename='images/logo.png') }}">
             </div>
-            <li><a href="home.html">HOME</a></li>
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
         <li class="predict">
                 <a href="predict.html">PREDICT</a>
                 <ul class="sub-menu">
-                    <li><a href="enterinfor.html">Enter Information</a></li>
-                    <li><a href="upload.html">Upload Data</a></li>
+                    <li><a href="{{ url_for('enterinformation') }}">Enter Information</a></li>
+                    <li><a href="{{ url_for('uploaddata') }}">Upload Data</a></li>
                 </ul>
             </li>   
             <li><a href="blog.html">BLOG</a></li>
