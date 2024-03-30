@@ -1,3 +1,4 @@
+/* HOME */
 /* Thanh header */
 body {
     font-family: 'Michroma', Times, serif;
@@ -150,7 +151,7 @@ body {
     text-align: justify;
 }
 
-button {
+button, .enter, .upload {
     background-color: #DD5C24;
     border: none;
     color: white;
@@ -166,7 +167,7 @@ button {
     font-weight: 400;
 }
 
-button:hover {
+button, .enter:hover {
     background-color: #cc5d2d;
 }
 

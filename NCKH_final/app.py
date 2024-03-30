@@ -21,7 +21,7 @@ def home():
 
 @app.route('/enter-information', methods=['POST'])
 def enterinformation():
-    return render_template('enterinf.html')
+    return render_template('enterinfor.html')
 
 @app.route('/enter-information/result', methods=['POST'])
 def predict():
@@ -58,7 +58,7 @@ def predict():
         catboost_classifier = model['catboost_classifier']
         segmentation_result = catboost_classifier.predict(X_df)
 
-        return render_template('result.html', prediction=prediction_result[0], segmentation=segmentation_result[0])
+        return render_template('enterinfor-result.html', prediction=prediction_result[0], segmentation=segmentation_result[0])
     return redirect(url_for('home'))
 
 @app.route('/upload-data', methods=['POST'])

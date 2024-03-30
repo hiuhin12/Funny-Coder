@@ -26,7 +26,8 @@
         </ul>
 
         <!-- Main content -->
-        <div class="main-content">
+        <div class="main-content"
+            style="background-image: url('{{ url_for('static', filename='images/main-bg.png') }}');">
             <h1 id="home">VEHICLE INSURANCE <br/>PREDICTION</h1>
             <p>Welcome to our vehicle insurance prediction website, where cutting-edge algorithms predict your customer's insurance needs, <br/>offering personalized quotes to ensure optimal coverage for the car with ease and precision!</p>
             <a href="#predict"><input class="main-button" type="button" value="Predict Now!" onclick=""></a>
@@ -43,21 +44,24 @@
                     <div class="box1">
                         <h3>For Salesman</h3>
                         <p>Click to enter customer information and instantly see their interests or segmentation. Our analytics simplify profiling, boosting engagement strategies.</p>
-                        <button><a href="enterinfor.html">Enter Information</a></button>
                         <form action="/enter-information" method="POST">
                             <input type="submit" class="enter" value="Enter Information">
                         </form>
+                        
                     </div>
                     <div class="box1">
                         <h3>For Company</h3>
                         <p>Just upload customer data to instantly view their interests and segmentation. Our analytics enhance profiling and strategy, offering a broader view of your customers.</p>
-                        <button><a href="upload.html">Upload Data</a></button>
+                        <form action="/upload-data" method="POST">
+                            <input type="submit" class="upload" value="Upload Data">
+                        </form>
                     </div>
                 </div>
         </div>
 
         <!-- Blog -->
-        <div class="blog-image">
+        <div class="blog-image"
+            style="background-image: url('{{ url_for('static', filename='images/blog.png') }}');">
             <h1 id="blog">BLOG</h1>
         </div>
         <div class="blog-container">
@@ -84,7 +88,8 @@
         <!-- Contact us -->
         <hr> 
         <div class="contact-container">
-            <div class="contact-form">
+            <div class="contact-form"
+                style="background-image: url('{{ url_for('static', filename='images/contact.png') }}');">
                 <h2 id="contact">CONTACT US</h2>
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="E-mail" required>

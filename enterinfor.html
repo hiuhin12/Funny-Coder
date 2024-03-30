@@ -124,6 +124,16 @@
                 opacity: 0.9;
             }
 
+            input[type=submit] {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                background: #DD5C24;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -150,30 +160,30 @@
                     <!-- Left Column -->
                     <div class="column">
                         <fieldset>
-                            <legend>Gender</legend>
-                            <input type="radio" id="female" name="gender" value="0">
+                            <legend><label for="Gender">Gender</label></legend>
+                            <input type="radio" id="female" name="Gender" value="0">
                             <label for="female">Female</label>
-                            <input type="radio" id="male" name="gender" value="1">
+                            <input type="radio" id="male" name="Gender" value="1">
                             <label for="male">Male</label>
                         </fieldset>
                         <fieldset>
-                            <legend>Age</legend>
+                            <legend><label for="Age">Age</label></legend>
                             <input type="number" id="age" name="age" value="age" placeholder="Customer's age">
                         </fieldset>
                         <fieldset>
-                            <legend>Driving License</legend>
+                            <legend><label for="Driving_License">Driving License</label></legend>
                             <input type="radio" id="haveDL" name="license" value="1">
                             <label for="haveDL">Have Driving License</label>
                             <input type="radio" id="nothaveDL" name="license" value="0">
                             <label for="nothaveDL">Don't have Driving License</label>
                         </fieldset>
                         <fieldset>
-                            <legend>Region Code</legend>
-                            <input type="number" id="regioncode" name="regioncode" value="regioncode" placeholder="The unique code for customer's region from 0 to 52">
+                            <legend><label for="Region_Code">Region Code</label></legend>
+                            <input type="number" id="Region_Code" name="Region_Code" placeholder="The unique code for customer's region from 0 to 52">
                         </fieldset>
                         <fieldset>
-                            <legend>Previously Insured</legend>
-                            <input type="radio" id="haveVI" name="vehicle_insurance" value="1">
+                            <legend><label for="Previously_Insured">Previously Insured</label></legend>
+                            <input type="radio" id="haveVI" name="Previously_Insured" value="1">
                             <label for="haveVI">Have Vehicle Insurance</label>
                             <input type="radio" id="nothaveVI" name="vehicle_insurance" value="0">
                             <label for="nothaveVI">Don't have Vehicle Insurance</label>
@@ -183,37 +193,36 @@
                     <!-- Right Column -->
                     <div class="column">
                         <fieldset>
-                            <legend>Vehicle Damage</legend>
-                            <input type="radio" id="damaged" name="vehicle_damage" value="0">
+                            <legend><label for="Vehicle_Damage">Vehicle Damage</label></legend>
+                            <input type="radio" id="damaged" name="Vehicle_Damage" value="1">
                             <label for="damaged">Damaged in the past</label>
-                            <input type="radio" id="notdamage" name="vehicle_damage" value="1">
+                            <input type="radio" id="notdamage" name="Vehicle_Damage" value="0">
                             <label for="notdamage">Not damage in the past</label>
                         </fieldset>
                         <fieldset>
-                            <legend>Vehicle Age</legend>
-                            <input type="radio" id="1year" name="vehicle_age" value="0">
+                            <legend><label for="Vehicle_Age">Vehicle Age</label></legend>
+                            <input type="radio" id="1year" name="Vehicle_Age" value="1">
                             <label for="1year">Less than 1 year</label>
-                            <input type="radio" id="12year" name="vehicle_age" value="1">
+                            <input type="radio" id="12year" name="Vehicle_Age" value="2">
                             <label for="12year">1 - 2 year</label>
-                            <input type="radio" id="2years" name="vehicle_age" value="2">
+                            <input type="radio" id="2years" name="Vehicle_Age" value="3">
                             <label for="2years">More than 2 years</label>
                         </fieldset>
                         <fieldset>
-                            <legend>Annual Premium</legend>
-                            <input type="number" id="annual_premium" name="annual_premium" value="annual_premium" placeholder="How much does this customer pay as premium in the year?">
+                            <legend><label for="Annual_Premium">Annual Premium</label></legend>
+                            <input type="number" id="Annual_Premium" name="Annual_Premium" placeholder="How much does this customer pay as premium in the year?">
                         </fieldset>
                         <fieldset>
-                            <legend>Policy Sales Channel</legend>
-                            <input type="number" id="policy_sales" name="policy_sales" value="policy_sales" placeholder="Anonymized Code for the channel of outreaching to customer from 1 to 163">
+                            <legend><label for="Policy_Sales_Channel">Policy Sales Channel</label></legend>
+                            <input type="number" id="Policy_Sales_Channel" name="Policy_Sales_Channel" placeholder="Anonymized Code for the channel of outreaching to customer from 1 to 163">
                         </fieldset>
                         <fieldset>
-                            <legend>Vintage</legend>
-                            <input type="number" id="vintage" name="vintage" value="vintage" placeholder="How many days has this customer been associated with the company?">
+                            <legend><label for="Vintage">Vintage</label></legend>
+                            <input type="number" id="Vintage" name="Vintage" placeholder="How many days has this customer been associated with the company?">
                         </fieldset>
-                    </div>
-                    
+                    </div> 
                 </form>
-                <button type="submit">Show Results</button>
+                <input type="submit">Show Results</button>
             </div>
         </main>
     </body>
