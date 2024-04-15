@@ -167,7 +167,7 @@ button, .enter, .upload {
     font-weight: 400;
 }
 
-button, .enter:hover {
+button, .enter:hover, .upload:hover {
     background-color: #cc5d2d;
 }
 

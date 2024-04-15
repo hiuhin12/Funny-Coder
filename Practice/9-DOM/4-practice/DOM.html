@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function ChangeText()
+            {
+                document.getElementById("p1").innerHTML="New text!";
+            }
+
+            function ChangeStyle()
+            {
+                document.getElementById("p2").style.color="blue";
+                document.getElementById("p2").style.fontFamily="Arial";
+            }
+
+            function changeYellow(tr)
+            {
+                tr.style.backgroundColor = "yellow"
+            }
+            function changeCyan(tr)
+            {
+                tr.style.backgroundColor = "cyan"            
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <p id="p1">Hello world!</p>
+        <input type="button" onclick="ChangeText()" value="Change text" />
+        <input type="button" onclick="document.body.style.backgroundColor='lavender';" value="Change background color" />
+       
+        <p id="p2">Hello world!</p>
+        <input type="button" onclick="ChangeStyle()" value="Change style" />
+
+        <table border="1" style="width:50%" cellpadding="0" cellspacing="0">
+            <tr style="background-color:red">
+                <td>#</td>
+                <td>ID</td>
+                <td>Name</td>
+            </tr>
+            <tr style="background-color:cyan" 
+                onmouseover="changeYellow(this)" onmouseout="changeCyan(this)">
+                <td>1</td>
+                <td>ID123</td>
+                <td>John</td>
+            </tr>
+        </table>
+    </body>
+</html> 
+    
+    
