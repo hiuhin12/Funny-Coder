@@ -1,34 +1,44 @@
-// Create XMLHttpRequest object
-var xhr = new XMLHttpRequest();
-
-// API url
-var url = "https://webapi.dantri.com.vn/lottery/get-vietlott-jack";
-
-// Open and send request 
-xhr.open("GET", url);
-xhr.send();
-
-// Callback function when response is ready
-xhr.onload = function() {
-
-  // Parse JSON data
-  var data = JSON.parse(xhr.responseText);
-
-  // Build HTML string
-  var html = "<table>";
-  html += "<tr><th>Code</th><th>Price</th></tr>";
-  
-  // Loop through data
-  for(var i=0; i<data.length; i++) {
-    html += "<tr>";
-    html += "<td>" + data[i].code + "</td>";
-    html += "<td>" + data[i].price + "</td>";
-    html += "</tr>";
-  }
-
-  html += "</table>";
-
-  // Insert HTML into page
-  document.getElementById("stocks").innerHTML = html;
-
+function getVietlottJackpotInfo(gender) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://webapi.dantri.com.vn/lottery/get-vietlott-jack", true);
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      // Parse the response text to a JavaScript object
+      var response = JSON.parse(xhr.responseText);
+      
+      // Depending on the gender, display the relevant lottery information
+      if (gender === 'man') {
+        displayTable(response.data.mega645, 'Mega 645 Jackpot Information');
+      } else if (gender === 'woman') {
+        displayTable(response.data.power655, 'Power 655 Jackpot Information');
+      }
+    } else {
+      // Handle errors
+      console.error('The request was unsuccessful!');
+    }
+  };
+  xhr.send();
 }
+
+function displayTable(data, title) {
+  var html = '<table border="1"><caption>' + title + '</caption><tr>';
+  for (var key in data[0]) {
+    html += '<th>' + key + '</th>';
+  }
+  html += '</tr>';
+  data.forEach(function(item) {
+    html += '<tr>';
+    for (var key in item) {
+      html += '<td>' + item[key] + '</td>';
+    }
+    html += '</tr>';
+  });
+  html += '</table>';
+  
+  // Assuming you have a div with id="lotteryInfo" in your HTML
+  document.getElementById('lotteryInfo').innerHTML = html;
+}
+
+// Example usage:
+// getVietlottJackpotInfo('man');
+// getVietlottJackpotInfo('woman');

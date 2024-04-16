@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="stock.js"></script>
+</head>
+
+<body>
+    <section class="header"></section>
+
+    <section class="content">
+        <table>
+            <span style="width: 30%">
+                <div id="stocks"></div>
+            </span>
+            <td>
+                <a href="https://tranduythanh.com/datasets/books.xml " target="_parent"></a>
+            </td>
+            <td class="ava-section" >
+                <container class="avata-container"></container>
+            </td> 
+        </table>
+    </section>
+
+    <section class="footer"></section>
+
+    <script>
+        $(function () {
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
+            $(".avata-container").load("Marquee.html");
+        });
+    </script>
+</body>
+
+</html>

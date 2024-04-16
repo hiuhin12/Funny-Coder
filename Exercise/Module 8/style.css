@@ -1,0 +1,149 @@
+body {
+    background-color: #F1EBE6;
+    font-family: 'Josefin Sans';
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10pt;
+}
+
+/* Header */
+section .header {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Section */
+section.content {
+    display: flex;
+    position: relative;
+    border-spacing: 0px;
+    text-align: justify;
+    height: fit-content;
+}
+
+/* Footer */
+section.footer {
+    width: 100%;
+    height: fit-content;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.avatar-container {
+    width: 50%;
+}
+
+iframe {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    background-color: rgb(94, 203, 119);
+    z-index: 1;
+    display: inline-block;
+}
+
+.menu li {
+    float: left;
+    width: 25%;
+    position: relative;
+    list-style: none;
+}
+
+.menu a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    padding: 10px;
+    z-index: 3;
+}
+
+/* selected nav-link element */
+
+#nav-link .current a,
+#nav-link li:hover>a {
+    color: black;
+}
+
+
+/* sublevels */
+
+#nav-link ul li:hover a,
+#nav-link li:hover li a {
+    color: black;
+}
+
+#nav-link ul li a:hover {
+    background: lavender;
+    width: fit-contet;
+    color: black;
+}
+
+
+/* drop down */
+
+#nav-link li:hover>ul {
+    visibility: visible;
+}
+
+#nav-link ul {
+    visibility: hidden;
+    padding: 0px;
+    width: 100%;
+    position: absolute;
+    background-color:  rgb(94, 203, 119);
+    border: 1px solid black;
+    margin-top: -1px;
+}
+
+#nav-link ul li {
+    float: none;
+    margin: 0;
+    width: 100%;
+}
+
+#nav-link li.slider {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color:  rgb(94, 203, 119);
+    z-index: 2;
+    transition: left .25s, background-color .25s;
+}
+

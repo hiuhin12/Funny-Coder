@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function loadXML() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "student.xml", true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    //use DOM here
+                    var xmlDoc = xhr.responseXML;
+                    var mssv = xmlDoc.getElementsByTagName("mssv")[0].childNodes[0].nodeValue
+                    var name = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>MSSV</th>
+            <td id="mssv"></td>
+        </tr>
+        <tr>
+            <th>Họ tên</th>
+            <td id="name"></td>
+        </tr>
+    </table>
+    <script>
+        loadXML()
+    </script>
+</body>
+
+</html>
