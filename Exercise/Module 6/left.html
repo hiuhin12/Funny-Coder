@@ -5,14 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX</title>
     <style>
+        /* Thêm CSS của bạn ở đây nếu cần */
         body {
             background-color: #BDD2B6;
+            font-family: 'Open Sans';
+            font-size: 13px;
         }
-    </style>
-</head>
-<body>
-    <div id="lotteryInfo"></div>
-    <h1>hi</h1>
-    <script src="vietlott.js"></script>
-</body>
+        #lotteryInfo {
+          margin-top: 20px;
+          text-align: center;
+        }
+        table {
+          margin: auto;
+          border-collapse: collapse;
+          border: 1px solid #000;
+        }
+        table th, table td {
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        table caption {
+          font-weight: bold;
+          font-family: 'Josefin Sans';
+          font-size: 17px;
+          margin-bottom: 10px;
+        }
+      </style>
+      </head>
+      <body>
+      
+      <!-- Đây là nơi thông tin jackpot sẽ được hiển thị -->
+      <div id="lotteryInfo"></div>
+      
+      <script>
+      // Chèn mã JavaScript của bạn ở đây
+      function getVietlottJackpotInfo(gender) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://webapi.dantri.com.vn/lottery/get-vietlott-jack", true);
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse the response text to a JavaScript object
+            var response = JSON.parse(xhr.responseText);
+            
+            // Depending on the gender, display the relevant lottery information
+            if (gender === 'man') {
+              displayTable(response.data.mega645, 'Mega 645 Jackpot Information');
+            } else if (gender === 'woman') {
+              displayTable(response.data.power655, 'Power 655 Jackpot Information');
+            }
+          } else {
+            // Handle errors
+            console.error('The request was unsuccessful!');
+          }
+        };
+        xhr.send();
+      }
+      
+      function displayTable(data, title) {
+        var html = '<table border="1"><caption>' + title + '</caption>';
+        
+        data.forEach(function(item) {
+          for (var key in item) {
+            html += '<tr>';
+            html += '<th>' + key + '</th>';  // Header cho khóa
+            html += '<td>' + item[key] + '</td>';  // Giá trị tương ứng với khóa
+            html += '</tr>';
+          }
+        });
+      
+        html += '</table>';
+        
+        // Assuming you have a div with id="lotteryInfo" in your HTML
+        document.getElementById('lotteryInfo').innerHTML = html;
+      }
+      
+      // Gọi hàm để lấy thông tin jackpot dựa trên giới tính
+      // Bạn cần thay 'man' bằng giới tính thực của sinh viên
+      getVietlottJackpotInfo('woman');
+      </script>
+      
+      </body>
 </html>

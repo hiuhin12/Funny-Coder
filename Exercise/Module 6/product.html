@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product List</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .product-image {
+    width: 100px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Menu item for products -->
+<div id="productsMenu">Products</div>
+
+<!-- Area to display the products table -->
+<div id="productsDisplay"></div>
+
+<script>
+    function loadProducts() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'datasets/products.xml', true);
+        xhr.onload = function() {
+          if (xhr.status >= 200 && xhr.status < 300) {
+
+            var xml = xhr.responseXML;
+            var productsXml = xml.getElementsByTagName('product');
+            var table = '<table>';
+            table += '<tr><th>ID</th><th>Name</th><th>Detail</th><th>Image</th></tr>';
+            
+            for (var i = 0; i < productsXml.length; i++) {
+              table += '<tr>';
+              table += '<td>' + productsXml[i].getElementsByTagName('id')[0].textContent + '</td>';
+              table += '<td>' + productsXml[i].getElementsByTagName('name')[0].textContent + '</td>';
+              table += '<td>' + productsXml[i].getElementsByTagName('detail')[0].textContent + '</td>';
+              table += '<td><img class="product-image" src="' + productsXml[i].getElementsByTagName('image')[0].textContent + '" /></td>';
+              table += '</tr>';
+            }
+            table += '</table>';
+            document.getElementById('productsDisplay').innerHTML = table;
+          }
+        };
+        xhr.send();
+      }
+      window.onload = loadProducts;
+</script>
+</body>
+</html>

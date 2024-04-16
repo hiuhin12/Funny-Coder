@@ -35,6 +35,20 @@
     height: auto;
   }
 </style>
+<script>
+  var student = {
+    id: "K214111971",
+    name: "Nguyen Trung Hieu Hien",
+    class: "K21411CA"
+}
+
+  function showStudentInfo() {
+    document.getElementById("id").textContent = student.id;
+    document.getElementById("name").textContent = student.name;
+    document.getElementById("class").textContent = student.class;
+  }
+  showStudentInfo();
+</script>
 </head>
 <body>
 
@@ -45,16 +59,19 @@
     <table class="info-table">
         <tr>
             <th>Student ID</th>
-            <td>K214111971</td>
+            <td id="id"></td>
         </tr>
         <tr>
             <th>Student name</th>
-            <td>Nguyen Trung Hieu Hien</td>
+            <td id="name"></td>
         </tr>
         <tr>
             <th>Class</th>
-            <td>K21411CA</td>
+            <td id="class"></td>
         </tr>
+        <script>
+          showStudentInfo();
+      </script>
     </table>
 </body>
 </html>
