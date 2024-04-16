@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        // Thông tin sinh viên
+        var student = {
+            id: "K214110837",
+            name: "Phan Thi My Kim",
+            class: "K21411C"
+        }
+
+        // Hiển thị thông tin sinh viên
+        function showStudentInfo() {
+            document.getElementById("id").textContent = student.id;
+            document.getElementById("name").textContent = student.name;
+            document.getElementById("class").textContent = student.class;
+        }
+
+        // Mặc định hiển thị thông tin SV
+        showStudentInfo();
+    </script>
+    <script src="stock.js"></script>
+</head>
+
+<body>
+    <section class="header"></section>
+
+    <section class="content">
+        <table>
+            <span style="width: 30%">
+                <div id="stocks"></div>
+            </span>
+            <td>
+                <div id="student-info">
+                    <img id="avatar" src="avatar.png" />
+                    <p>Mã sinh viên: <span id="id"></span></p>
+                    <p>Tên sinh viên: <span id="name"></span></p>
+                    <p>Tên lớp: <span id="class"></span></p>
+                </div>
+                <script>
+                    showStudentInfo();
+                </script>
+                
+            </td>
+            <td class="ava-section" >
+                <container class="avata-container"></container>
+            </td> 
+        </table>
+    </section>
+
+    <section class="footer"></section>
+
+    <script>
+        $(function () {
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
+            $(".avata-container").load("Marquee.html");
+        });
+    </script>
+</body>
+
+</html>

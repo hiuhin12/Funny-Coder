@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline style</title>
+    <link rel="stylesheet" href="/ASM-WEB/K214110837_MK/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="stock.js"></script>
+</head>
+
+<body>
+    <section class="header"></section>
+
+    <section class="content">
+
+        <table>
+            <tr>
+                <span style="width: 30%">
+                    <div id="stocks"></div>
+                </span>
+                <td class="content-section">
+                    <h2><u> Theory</u></h2>
+                    <p>Inline styles are CSS styles applied directly to an HTML element using the style attribute.</p>
+                    <p>Example:</p>
+                    &lt;/div>div style="color: red; font-size: 20px;">This is a red text with font size 20px&lt;/div>
+                </td>  
+                <td class="ava-section">
+                    <container class="avata-container"></container>
+                </td> 
+            </tr>
+        </table>
+    </section>
+
+    <section class="footer"></section>
+    
+    <script>
+        $(function () {
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
+            $(".avata-container").load("Marquee.html");
+        });
+    </script>
+</body>
+
+</html>
+
+        

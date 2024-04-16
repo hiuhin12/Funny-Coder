@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Thanh header */
+        body {
+            font-family: 'Josefin Sans';
+            margin: 0px;
+            padding: 0px;
+            background-color: #F1EBE6;
+        }
+
+        .header {
+            font-size: 16px;
+            display: flex;
+            list-style: none;
+            border: 1px solid #838383;
+            background-color: #F1EBE6;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        .web {
+            position: relative;
+            color: black;
+        }
+
+        .header .web:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu {
+            list-style: none;
+            position: absolute;
+            border: 1px solid #838383;
+            padding: 0;
+            left: 0;
+            display: none;
+            background-color: #F1EBE6;   
+        }
+
+        .header a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 16px 32px;
+            color: black;
+        }
+
+        .header li:hover a:hover {
+            color: #F1EBE6;
+            background-color: #838383;
+            box-sizing: border-box;
+        }
+
+        .header .sub-menu li a {
+            color: black;
+            display: block; /* Đặt các thẻ a thành block để chúng mở rộng chiều rộng đầy đủ */
+            width: 100%; /* Đặt chiều rộng 100% để chúng khớp với chiều rộng của .sub-menu */
+            box-sizing: border-box;
+        }
+
+    </style>
+    <title>Menu</title>
+</head>
+<body>
+    <!-- Header menu -->
+    <ul class="header">
+        <li><a href="home1.html">HOME</a></li>
+        <li><a href="product.html">PRODUCTS</a></li>   
+        <li class="web">
+            <a href="#">WEB</a>
+            <ul class="sub-menu">
+                <li><a href="html.html" target="main_frame">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javascript.html">JAVASCRIPT</a></li>
+            </ul>
+        </li>
+        <li><a href="login.html">LOGIN</a></li>
+    </ul>
+</body>
+</html>
