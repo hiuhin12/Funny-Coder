@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Object & Json Array</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="header"></section>
+
+    <section class="content">
+        <table>
+            <tr>
+                <td class="ava-section">
+                    <container class="avata-container"></container>
+                </td>
+                <td class="content-section">
+                    <form id="form-register">
+                        <label for="txtFullname">Họ và tên</label>
+                        <br>
+                        <input type="text" name="txtFullname" id="txtFullname">
+                        <br>
+                        <br>
+                        <label for="txtPhone">Số điện thoại</label>
+                        <br>
+                        <input type="text" name="txtPhone" id="txtPhone">
+                        <br>
+                        <br>
+                        <label for="txtFormContent">Nội dung thông điệp</label>
+                        <br>
+                        <textarea name="txtFormContent" id="txtFormContent"></textarea>
+                        <br>
+                        <br>
+                        <input class="form-button" type="button" value="Đăng Ký" onclick="register()">
+                        <input class="form-button" type="button" value="Nhập lại" onclick="reset()">
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    <section class="footer"></section>
+
+</body>
+</html>
