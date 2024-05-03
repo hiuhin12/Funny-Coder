@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#story">Our Story</a>
+        </div>
+    </header>
+    <main>
+        <div class="product-display">
+            <img src="flower-clock.png" alt="Cute Flower Shaped Wall Clock">
+            <div class="product-details">
+                <h1>Cute Flower Shaped Wall Clock</h1>
+                <p class="price">$50.00</p>
+                <div class="ratings">
+                    <!-- Add star rating here -->
+                    ★★★★☆
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="similar-items">
+            <!-- Similar items would be dynamically loaded here -->
+        </div>
+    </main>
+    <footer>
+        <p>Contact Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+    </footer>
+    <script >
+        document.querySelector('button').addEventListener('click', () => {
+            alert('Added to cart!');
+        });
+        
+    </script>
+</body>
+</html>
