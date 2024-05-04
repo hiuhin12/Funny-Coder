@@ -5,6 +5,84 @@
     <link href="https://fonts.googleapis.com/css?family=Fraunces&display=swap" rel="stylesheet">
     <link href="style4.css" rel="stylesheet">
     <title>Sign Up</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'DM Sans';
+        }
+        body {
+            font-size: 14px;
+            background: url("images/signup.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .highlight {
+            font-weight: bold;
+            color: #75634D;
+        }
+        .signup-blur {
+            display: flex;
+            justify-content: center; /* Canh giữa theo chiều ngang */
+            min-height: 100vh; /* Đảm bảo body chiếm toàn bộ chiều cao của viewport */
+            background-color: rgba(255,255,255,0.5);
+            backdrop-filter: blur(10px);
+            width: 70%;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo đổ bóng nhẹ cho khung */
+        }
+        .signup-title {
+            margin-top: 15px;
+            color: #000000;
+            font-family: 'Fraunces';
+            font-weight: 550;
+            font-size: 30px;
+            position: absolute;
+        }
+        .signup-title-line {
+            width: 455px;
+            height: 1px;
+            background: #75634D;
+            position: absolute;
+            top: 60px;
+        }
+        .signup-subtitle {
+            font-size: 15px;
+            margin-top: 65px;
+        }
+        .signup-form {
+            width: 294px;
+            height: 71px;
+            opacity: 1;
+            position: absolute;
+            top: 175px;
+            left: 402px;
+            overflow: hidden;
+        }
+        .signup-firstname {
+            width: 218px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 0px;
+            left: 1px;
+            font-family: DM Sans;
+            font-weight: Regular;
+        
+            opacity: 1;
+            text-align: left;
+        }
+        .signup-enterfirstname {
+            color: #838383;
+            position: absolute;
+            top: 33px;
+            left: 47px;
+            font-family: DM Sans;
+            font-weight: Regular;
+        
+            opacity: 1;
+            text-align: left;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="signup-container">
@@ -12,7 +90,14 @@
             <div class="signup-title">Get Started!</div>
             <div class="signup-title-line"></div>
             <div class="signup-subtitle"><span class="highlight">Create</span> a new account</div>
+            <form class="signup-form">
+                <div class="name-group">
+                    <div class="form-group">
+                        <span class="signup-firstname">First name</span>
+                        <span class="signup-enterfirstname">Enter your first name</span>
+                    </div>
+                </div>
+            </form>
         </div>
-        
     </div>
 </body>

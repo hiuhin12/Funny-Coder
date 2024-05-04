@@ -3,7 +3,7 @@
     font-family: 'DM Sans';
 }
 body {
-    font-size: 13px;
+    font-size: 14px;
     background: url("images/signup.jpg");
     background-repeat: no-repeat;
     background-size: cover;  
@@ -25,19 +25,51 @@ body {
 .signup-title {
     margin-top: 15px;
     color: #000000;
-    font-family: Fraunces;
-    font-weight: SemiBold;
+    font-family: 'Fraunces';
+    font-weight: 550;
     font-size: 30px;
     position: absolute;
 }
 .signup-title-line {
     width: 455px;
     height: 1px;
-    background: rgba(117,99,77,1);
+    background: #75634D;
     position: absolute;
     top: 60px;
 }
 .signup-subtitle {
     font-size: 15px;
     margin-top: 65px;
+}
+.signup-form {
+    width: 294px;
+    height: 71px;
+    opacity: 1;
+    position: absolute;
+    top: 175px;
+    left: 402px;
+    overflow: hidden;
+}
+.signup-firstname {
+    width: 218px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    font-family: DM Sans;
+    font-weight: Regular;
+
+    opacity: 1;
+    text-align: left;
+}
+.signup-enterfirstname {
+    color: #838383;
+    position: absolute;
+    top: 33px;
+    left: 47px;
+    font-family: DM Sans;
+    font-weight: Regular;
+
+    opacity: 1;
+    text-align: left;
 }

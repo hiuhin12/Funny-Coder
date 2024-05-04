@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Sign-Up Form</title>
+    <title>Sign-Up Form</title>
     <link rel="stylesheet" href="">
     <style>
         * {
@@ -24,7 +24,7 @@
         .form-container {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px 40px;
-            width: 350px;
+            width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 8px;
@@ -47,10 +47,21 @@
             flex-direction: column;
         }
         
+        .name-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        
         .form-group {
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
+            flex: 1;
+            margin-right: 10px;
+        }
+        
+        .form-group:last-child {
+            margin-right: 0;
         }
         
         label {
@@ -63,14 +74,6 @@
         
         .icon {
             margin-right: 5px;
-        }
-        
-        .user-icon::before {
-            content: "\1F464"; /* Unicode for person icon */
-        }
-        
-        .email-icon::before {
-            content: "\2709"; /* Unicode for envelope/mail icon */
         }
         
         input {
@@ -100,17 +103,27 @@
         <h2>Get Started!</h2>
         <p>Create a new account</p>
         <form class="sign-up-form">
-            <div class="form-group">
-                <label for="first-name"><i class="icon user-icon"></i> First name</label>
-                <input type="text" id="first-name" placeholder="Enter your first name">
-            </div>
-            <div class="form-group">
-                <label for="last-name"><i class="icon user-icon"></i> Last name</label>
-                <input type="text" id="last-name" placeholder="Enter your last name">
+            <div class="name-group">
+                <div class="form-group">
+                    <label for="first-name"><i class="icon user-icon"></i> First name</label>
+                    <input type="text" id="first-name" placeholder="Enter your first name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name"><i class="icon user-icon"></i> Last name</label>
+                    <input type="text" id="last-name" placeholder="Enter your last name">
+                </div>
             </div>
             <div class="form-group">
                 <label for="email"><i class="icon email-icon"></i> Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password"><i class="icon lock-icon"></i> Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password"><i class="icon lock-icon"></i> Confirm password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password">
             </div>
             <button type="submit">Sign Up</button>
         </form>

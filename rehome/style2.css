@@ -237,6 +237,19 @@
     left: 402px;
     overflow: hidden;
   }
+  .v526_4109 {
+    width: 294px;
+    height: 71px;
+    background: url("../images/v526_4109.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 175px;
+    left: 763px;
+    overflow: hidden;
+  }
   .v526_4064 {
     width: 218px;
     color: rgba(0,0,0,1);
@@ -273,19 +286,7 @@
   .name {
     color: #fff;
   }
-  .v526_4109 {
-    width: 294px;
-    height: 71px;
-    background: url("../images/v526_4109.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 175px;
-    left: 763px;
-    overflow: hidden;
-  }
+
   .v526_4110 {
     width: 218px;
     color: rgba(0,0,0,1);
