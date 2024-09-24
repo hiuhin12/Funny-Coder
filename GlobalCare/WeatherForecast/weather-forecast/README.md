@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Xây dựng Ứng dụng Dự báo Thời tiết
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Mục tiêu:
 
-## Available Scripts
+Tạo một ứng dụng dự báo thời tiết đơn giản cho phép người dùng tìm kiếm điều kiện thời tiết hiện tại ở bất kỳ thành phố nào. Ứng dụng này nên lấy dữ liệu từ một API thời tiết và hiển thị nó theo một định dạng thân thiện với người dùng.
 
-In the project directory, you can run:
+## Yêu cầu:
 
-### `npm start`
+### Thiết lập và môi trường:
+Tạo một ứng dụng React mới bằng cách sử dụng Create React App.
+Sử dụng các thành phần chức năng và các hook của React (useState, useEffect).
+### Các thành phần:
+Thành phần App: Thành phần chính chứa cấu trúc của ứng dụng.
+Thành phần SearchBar: Một thành phần với trường nhập liệu nơi người dùng có thể nhập tên của một thành phố và một nút để bắt đầu tìm kiếm.
+Thành phần WeatherInfo: Một thành phần hiển thị thông tin thời tiết cho thành phố được tìm kiếm.
+Thành phần Error: Một thành phần hiển thị thông báo lỗi nếu không tìm thấy thành phố hoặc có bất kỳ vấn đề nào khác với yêu cầu API.
+### Quản lý trạng thái:
+Sử dụng hook useState để quản lý trạng thái của nhập liệu tìm kiếm, dữ liệu thời tiết và thông báo lỗi.
+### Tích hợp API:
+Sử dụng API của OpenWeatherMap (hoặc bất kỳ API thời tiết miễn phí nào khác) để lấy dữ liệu thời tiết.
+Đảm bảo xử lý trạng thái đang tải và lỗi một cách thích hợp.
+### Giao diện:
+Áp dụng CSS cơ bản để làm cho ứng dụng trông gọn gàng. Bạn có thể sử dụng CSS modules hoặc styled-components nếu thích.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
