@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfaf2;
+}
+
+/* Logo section */
+.logo-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-section h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.search-container input {
+  width: 80%;
+  max-width: 450px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-size: 18px;
+  background-color: #d0e7e6;
+  padding-left: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-container img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #d0e7e6;
+  cursor: pointer;
+}
+
+.search-container img:active {
+  transform: scale(0.95); /* Thu nhỏ khi nhấn vào */
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Weather icon */
+.weather-icon {
+  width: 100px; 
+  margin-bottom: 20px;
+}
+
+/* Temperature & location */
+.temperature {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.location {
+  font-size: 24px;
+  margin: 10px 0 30px;
+  color: #555;
+}
+
+/* Weather data */
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+/* Wind speed & Humidity */
+.weather-data .col {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  font-size: 18px;
+  margin: 0 30px;
+}
+
+.weather-data .col img {
+  width: 32px;
+}
+
+.col p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.col span {
+  font-size: 14px;
+  color: #555;
+}
+
+.no-data {
+  text-align: center;
+}
