@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Position absolute</title>
+        <style>
+
+          .box1 {
+              width: 150px;
+              height: 150px;
+              background-color: pink;
+              top: 50px;
+              left: 40px;
+              position: relative;
+          }
+
+          .box1-child {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            
+          }
+
+          .box2 {
+              margin-top: 30px;
+              width: 200px;
+              height: 200px;
+              background-color: skyblue;
+              
+          }
+
+            ul {
+                height: 2000px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div>
+                <div>
+                    <div class="box1-cousin"></div>
+                    <div class="box1-child"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box2"></div>
+        <h1>Position</h1>
+        <ul>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+    </body>
+</html>
